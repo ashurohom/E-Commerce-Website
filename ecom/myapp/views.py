@@ -5,6 +5,7 @@ from django.contrib.auth import authenticate,login,logout
 from .models import Product
 # Create your views here.
 
+# index page
 def index(request):
     context={}
     products=Product.objects.all()
