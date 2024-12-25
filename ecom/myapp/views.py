@@ -54,6 +54,8 @@ def register(request):
         else:
             return render(request,'register.html')
 
+
+# user Login Page
 def ulogin(request):
     context={}
     if request.method == "POST":
