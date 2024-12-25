@@ -1,0 +1,14 @@
+a{
+    text-decoration: none;
+}
+
+.card-img-top{
+    border-radius: 10px;
+}
+
+#cart{
+    margin-bottom: 20px;
+    background-color: rgb(191, 202, 202, 0.5);
+    box-shadow: 1px 1px 10px 1px black;
+    
+}

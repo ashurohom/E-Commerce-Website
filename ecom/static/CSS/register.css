@@ -1,0 +1,15 @@
+.col-md-4{
+    border: 1px solid lightblue;
+    box-shadow: 2px 2px 1px 1px aqua;
+    padding: 20px;
+    background-color: azure;  
+    border-radius: 20px;  
+}
+
+#btn{
+    margin-left: 150px;
+}
+
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,29 @@
+#card{
+    margin-top: 50px;
+    margin-left: 450px;
+    
+}
+
+img{
+    height: 450px;
+    width: 300px;
+}
+
+.card-body{
+    margin-left: 100px;
+    margin-top: 10px;
+    /* width: 400px; */
+}
+/* #button{
+    margin-top: 100px;
+} */
+
+
+#footer{
+    background-color: rgb(67, 255, 214);
+    margin-top: 75px;
+}
+
+.li{
+    text-decoration: none;
+}

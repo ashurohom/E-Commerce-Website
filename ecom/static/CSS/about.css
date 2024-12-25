@@ -1,0 +1,30 @@
+
+
+.col-md-3{
+    /* background-color: rgb(48, 45, 45); */
+    color: rgb(0, 0, 0);
+    height: px;
+    border: 0px solid lightblue;
+    /* box-shadow: 2px 2px 10px black;; */
+}
+
+.card{
+   
+   margin: 20px 0px 20px 70px;
+   background-color: rgb(175, 235, 215);
+}
+.ccard:hover{
+   background-color: rgb(128, 119, 119);
+   box-shadow: 5px 5px 5px 5px  rgb(37, 36, 36);
+}
+
+.card-body{
+   text-align: center;
+}
+
+img{
+   padding-top: 10px;
+   border-radius: 32%;
+   /* border: 1px solid black; */
+   /* box-shadow: 5px 10px  rgb(187, 175, 175);*/
+} 

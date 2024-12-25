@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/about.css'%}">
+{% endblock header %}
+
+
+
+{% block main %}
+
+    <div class="row">
+
+        {% comment %} <div class="col-4">1</div>
+    <div class="col-4"><h1>Hello About Section</h1></div>
+    <div class="col-4">3</div> {% endcomment %}
+
+        <div class="col-md-3"><b>About</b></div>
+        <div class="col-md-9"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore cum alias possimus iure nemo commodi quasi 
+          debitis nobis nihil aliquid qui dolor et libero consequuntur ipsam aspernatur quos, illum sit modi saepe nulla! Odio sequi quis nemo 
+          illo deserunt expedita error quam qui eligendi rem eveniet impedit architecto, quos, tempora velit perspiciatis distinctio beatae quaerat
+           laborum! Cupiditate ad dolor modi tempore dolorum nam harum asperiores excepturi. Adipisci voluptates reprehenderit molestiae exercitationem
+            deleniti fuga suscipit iure, sed voluptatem praesentium doloribus provident pariatur consequuntur nobis tempora dicta optio id obcaecati.
+             Distinctio error reiciendis nesciunt similique tempora! Vero, nam! Atque iure enim fuga.</p></div>
+    </div>  
+    <hr>
+
+    <div class="row">
+        <div class="col-md-3"><b>Founders</b></div>
+        
+        <div class="col-md-9">
+        <div class="row">
+
+            <div class="card" style="width: 18rem;">
+              <img src="{%static 'Image/adidas.jpg'%}" class="card-img-top" alt="..." height="250px">
+                <div class="card-body">
+                  <h5 class="card-title">Ashitosh</h5>
+                  <p class="card-text"> : <strong>Shoes</strong></p>
+                  <p class="card-text">Price : <strong>2000 Rs</strong>&nbsp;<del>4000 Rs</del></p>
+                  <a href="#" class="btn btn-primary">About</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="{%static 'Image/crocs.jpg'%}" class="card-img-top" alt="..." height="250px">
+            <div class="card-body">
+                <h5 class="card-title">PUMA</h5>
+                <p class="card-text">category : <strong>Shoes</strong></p>
+                <p class="card-text">Price : <strong>5000 Rs</strong>&nbsp;<del>7000 Rs</del></p>
+                <a href="#" class="btn btn-primary">BUY</a>
+            </div>
+          </div>
+
+
+    </div>    
+        
+
+
+
+
+
+    
+{% endblock main %}
+
+
+
+    

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/register.css'%}">
+{% endblock header %}
+
+{% block main %}
+    
+<div class="row">
+            
+    <form method="POST" >
+        {% csrf_token %}
+        <div class="col-md-4 mx-auto mt-5">
+            
+            {% if error_msg %}                
+            <div class="alert alert-danger">
+                {{error_msg}}
+            </div>
+            {% endif %}
+
+        
+               <h4>Register Here</h4><br>
+            
+            <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"  name="uemail"><br>
+            </div>
+            
+            
+            <div class="mb-3">                      
+            <label for="uname" class="form-label">User Name</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username"  name="username"><br>
+            </div>
+        
+            <div class="mb-3">
+            <label for="password" class="form-label">Email Password</label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password"  name="upassword"><br>
+            </div>
+
+            <div class="mb-3">
+            <label for="cpassword" class="form-label">ReEnter Password</label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password"  name="urepass"><br>
+            </div>
+            
+            <button type="submit" class="btn btn-danger" id="btn">Register</button>&nbsp;&nbsp;&nbsp;
+            <a href="#">Already Register</a>
+
+        </div>
+        
+
+    </form>
+</div>
+
+{% endblock main %}
+    
+

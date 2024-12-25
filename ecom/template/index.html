@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block main %}
+<div class="row">
+    <div class="col-md-3">Filter By Category<hr>
+      <ul type="none">
+        <a href="#"><li class="li">All</li></a>
+        <a href="#"><li class="li">Shoes</li></a>
+        <a href="#"><li class="li">Mobile</li></a>
+        <a href="#"><li class="li">Clothes</li></a>
+      </ul>
+    
+      <p>Sort By Price</p><hr>
+    <ul type="none">
+      <a href="#"><li class="li">High To Low</li></a>
+      <a href="#"><li class="li">High To Low</li></a>
+    </ul>
+
+    <p>Filter By Price</p><hr>
+    <!-- <ul type="none">
+      <a href="#"><li class="li">Under 500</li></a>
+      <a href="#"><li class="li">500 To 1000 </li></a>
+      <a href="#"><li class="li">1000 To 2000 </li></a>
+    </ul> -->
+    
+    
+    
+    <form>
+      <div class="md-3">
+        <label for="exampleInputEmail1" class="form-label">Min</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text"></div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Max</label>
+        <input type="number" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+
+    
+  </div>
+    
+    <div class="col-md-9">
+      <div class="row">
+
+        
+      {% for i in products %}
+
+        <div class="card" style="width: 18rem;">
+          <img src="{{i.image.url}}" class="card-img-top" alt="..." height="250px">
+            <div class="card-body">
+              <h5 class="card-title">{{i.pname}}</h5>
+              
+            {% if i.category == 1 %}
+                <p class="card-text">category : <strong>Shoes</strong></p>
+              
+            {% elif i.category == 2%}
+              <p class="card-text">category : <strong>Mobile</strong></p>
+            
+            {% elif i.category == 3%}
+              <p class="card-text">category : <strong>Clothes</strong></p>
+            
+              {% elif i.category == 4%}
+              <p class="card-text">category : <strong>Watch</strong></p>
+
+              {% endif %}
+                
+              <p class="card-text">Price : <strong>{{i.offer_price}}</strong>&nbsp;<del>{{i.price}}</del></p>
+              <p class="card-text">category : {{i.description}}</p>
+
+              <a href="/product_details.html" class="btn btn-primary">BUY</a>
+            </div>
+        </div>
+
+      {% endfor %}
+
+
+       
+      </div>
+    </div>
+
+</div>
+{% endblock main %}
+    

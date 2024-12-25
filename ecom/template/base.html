@@ -1,0 +1,20 @@
+{%load static%}
+{% include 'header.html' %}
+
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/register.css'%}">
+    <link rel="stylesheet" href="{% static 'css/ulogin.css'%}">
+    <link rel="stylesheet" href="{% static 'css/product.css'%}">
+    <link rel="stylesheet" href="{% static 'css/cart.css'%}">
+    <link rel="stylesheet" href="{% static 'css/cust_details.css'%}">
+    <link rel="stylesheet" href="{% static 'css/about.css'%}">
+{% endblock header %}
+
+
+
+{% block main %}
+    <h1>This Is Main Section Of Block</h1>
+{% endblock main %}
+
+{% include 'footer.html' %}
