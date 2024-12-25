@@ -83,7 +83,9 @@ def ulogin(request):
                     
     else:
          return render(request,'ulogin.html')
-    
+
+
+# logout / session expired
 def ulogout(request):
     logout(request)
     return redirect('/login')    
