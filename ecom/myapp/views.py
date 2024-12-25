@@ -22,6 +22,8 @@ def about(request):
 # def home(request):
 #     return render(request,'home.html')
 
+
+# user Registration Page
 def register(request):
         context={}
         if request.method == 'POST':
