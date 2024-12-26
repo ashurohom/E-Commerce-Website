@@ -54,10 +54,29 @@
               <li class="nav-item">
                 <a class="nav-link" href="/cart">My carts</a>
               </li>
+
+              
+              
+              {% if request.user.is_authenticated %}
+              
               <li class="nav-item">
-                <a class="nav-link" href="/details">My orders</a>
+                <a class="nav-link" href="/myorder">My orders</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/product_details">product_details</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="/details">{{username}} </a>
+              </li>
+             
+
+
+              {% endif %}
+             
             </ul>
+          
+              
 
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -68,4 +87,6 @@
           </div>
         </div>
       </nav>
+
+          
 </div>

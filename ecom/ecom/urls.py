@@ -26,9 +26,9 @@ urlpatterns = [
     path('register/',views.register),
     path('login/',views.ulogin),
     path('logout/',views.ulogout),
-    path('product/',views.product),
-    path('cart/',views.cart),
-    path('details/',views.cust_details),
+    path('product_details/<pid>/',views.product_details),
+    path('cart/',views.cart),   
+    path('myorder/',views.my_order),
     # path('home/',views.home),
 ]
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

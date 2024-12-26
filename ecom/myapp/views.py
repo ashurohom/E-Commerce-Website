@@ -9,7 +9,7 @@ from .models import Product
 def index(request):
     context={}
     products=Product.objects.all()
-    print(products)
+    # print(products)
     context['products']=products
     return render(request,'index.html',context)
 
@@ -62,6 +62,8 @@ def ulogin(request):
             un = request.POST['uname']
             up = request.POST['upass']
 
+            
+
             if un == "" or up == "":
                 context['error_msg']="All Fields are Required"
                 return render(request,'ulogin.html',context)
@@ -90,12 +92,15 @@ def ulogout(request):
     logout(request)
     return redirect('/login')    
 
-def product(request):
-    return render(request,'product.html')
+def product_details(request,pid):
+    context={}
+    prod=Product.objects.filter(id=pid)
+    context['product']=prod
+    return render(request,'product_details.html',context)
 
 def cart(request):
     return render(request,'cart.html')
 
-def cust_details(request):
-    return render(request,'cust_details.html')
+def my_order(request):
+    return render(request,'myorder.html')
 
