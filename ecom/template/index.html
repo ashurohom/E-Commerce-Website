@@ -6,16 +6,17 @@
 <div class="row">
     <div class="col-md-3">Filter By Category<hr>
       <ul type="none">
-        <a href="#"><li class="li">All</li></a>
-        <a href="#"><li class="li">Shoes</li></a>
-        <a href="#"><li class="li">Mobile</li></a>
-        <a href="#"><li class="li">Clothes</li></a>
+        <a href="/"><li class="li">All</li></a>
+        <a href="/filterbycategory/1/"><li class="li">Shoes</li></a>
+        <a href="/filterbycategory/2/"><li class="li">Mobile</li></a>
+        <a href="/filterbycategory/3/"><li class="li">Clothes</li></a>
+        <a href="/filterbycategory/4/"><li class="li">Watch</li></a>
       </ul>
     
       <p>Sort By Price</p><hr>
     <ul type="none">
-      <a href="#"><li class="li">High To Low</li></a>
-      <a href="#"><li class="li">High To Low</li></a>
+      <a href="/sortbyprice/1/"><li class="li">High To Low</li></a>
+      <a href="/sortbyprice/0/"><li class="li">Low To High</li></a>
     </ul>
 
     <p>Filter By Price</p><hr>
@@ -27,15 +28,15 @@
     
     
     
-    <form>
+    <form method="GET" action="/pricefilter/">
       <div class="md-3">
-        <label for="exampleInputEmail1" class="form-label">Min</label>
-        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <label for="exampleInputEmail1" class="form-label">Max</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" name="max" aria-describedby="emailHelp">
         <div id="emailHelp" class="form-text"></div>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Max</label>
-        <input type="number" class="form-control" id="exampleInputPassword1">
+        <label for="exampleInputPassword1" class="form-label">Min</label>
+        <input type="number" class="form-control" id="exampleInputPassword1" name="min" value="0">
       </div>
       <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">

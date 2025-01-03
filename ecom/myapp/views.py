@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from django.db.models import Q
 from django.contrib.auth.models import User     # for default table
 from django.contrib.auth import authenticate,login,logout
 from .models import Product
@@ -104,3 +105,31 @@ def cart(request):
 def my_order(request):
     return render(request,'myorder.html')
 
+def filterbycategory(request, cid):
+    context={}
+    product=Product.objects.filter(category=cid)
+    context['products']= product
+    return render (request,"index.html",context)
+
+
+def filterbyprice(request, sid):
+    context={}
+    if sid == '0':
+        products = Product.objects.order_by('price')
+    else:    
+        products = Product.objects.order_by('-price')
+
+    context['products'] = products
+    return render (request,"index.html",context)
+    
+def pricefilter(request):
+    context={}
+    mx=request.GET["max"]
+    mn=request.GET["min"]
+    q1 = Q(offer_price__gte=mn)
+    q2 = Q(offer_price__lte=mx)
+    product = Product.objects.filter(q1 & q2)
+    context["products"] = product
+    return render(request,'index.html',context)
+
+     
