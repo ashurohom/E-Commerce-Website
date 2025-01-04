@@ -112,7 +112,7 @@ def filterbycategory(request, cid):
     return render (request,"index.html",context)
 
 
-def filterbyprice(request, sid):
+def sortbyprice(request, sid):
     context={}
     if sid == '0':
         products = Product.objects.order_by('price')
