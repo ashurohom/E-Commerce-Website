@@ -100,10 +100,16 @@ def product_details(request,pid):
     return render(request,'product_details.html',context)
 
 def addtocart(request,pid):
+
+    product=Product.objects.filter(id=pid)
+    context={}
+    context['product']=product
+
     if request.user.is_authenticated:
         pass
     else:
-        return render(request,'cart.html')
+        context['error']="Please Login First"
+        return render(request,'product_details.html',context)
 
 def my_order(request):
     return render(request,'myorder.html')
