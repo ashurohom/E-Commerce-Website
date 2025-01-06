@@ -11,6 +11,9 @@ class Product(models.Model):
     image = models.ImageField(upload_to='image')
     offer_price = models.IntegerField(default=0)
 
+    def __str__(self):
+        return self.pname
+
 class Card(models.Model):
     userid=models.ForeignKey('auth.User',on_delete=models.CASCADE,db_column='userid')
     pid=models.ForeignKey('Product',on_delete=models.CASCADE,db_column='pid') 

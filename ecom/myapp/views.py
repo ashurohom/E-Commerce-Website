@@ -99,6 +99,7 @@ def product_details(request,pid):
     context['product']=prod
     return render(request,'product_details.html',context)
 
+
 def addtocart(request,pid):
 
     product=Product.objects.filter(id=pid)
@@ -107,8 +108,9 @@ def addtocart(request,pid):
 
     if request.user.is_authenticated:
         u=User.objects.filter(id=request.user.id)
-        product=Product.objects.filter(id=pid)
-
+        p=Product.objects.filter(id=pid)
+        print(u[0],p[0])
+        return HttpResponse("Cart added")
 
     else:
         context['error']="Please Login First"
