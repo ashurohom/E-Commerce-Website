@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.db.models import Q
 from django.contrib.auth.models import User     # for default table
 from django.contrib.auth import authenticate,login,logout
-from .models import Product
+from .models import Product,Card
 # Create your views here.
         
 # index page
@@ -109,8 +109,15 @@ def addtocart(request,pid):
     if request.user.is_authenticated:
         u=User.objects.filter(id=request.user.id)
         p=Product.objects.filter(id=pid)
-        print(u[0],p[0])
-        return HttpResponse("Cart added")
+        print(u[0],p[0]) #user name and product name
+        q1=Q(userid=u[0])
+        q2=Q(pid=p[0])
+        card=Card.objects.filter(q1 & q2)
+        if len(card)==1:
+            context['error'] = "Product Already in cart"   
+            return render(request,'product_details.html',context)
+        else:
+            return HttpResponse("Card Added")
 
     else:
         context['error']="Please Login First"
