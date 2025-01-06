@@ -5,7 +5,7 @@ from django.contrib.auth.models import User     # for default table
 from django.contrib.auth import authenticate,login,logout
 from .models import Product
 # Create your views here.
-
+        
 # index page
 def index(request):
     context={}
@@ -99,8 +99,11 @@ def product_details(request,pid):
     context['product']=prod
     return render(request,'product_details.html',context)
 
-def cart(request):
-    return render(request,'cart.html')
+def addtocart(request,pid):
+    if request.user.is_authenticated:
+        pass
+    else:
+        return render(request,'cart.html')
 
 def my_order(request):
     return render(request,'myorder.html')

@@ -27,7 +27,7 @@ urlpatterns = [
     path('login/',views.ulogin),
     path('logout/',views.ulogout),
     path('product_details/<pid>/',views.product_details),
-    path('cart/',views.cart),   
+    path('addtocart/<pid>/',views.addtocart),   
     path('myorder/',views.my_order),
     path('filterbycategory/<cid>/',views.filterbycategory),
     path('sortbyprice/<sid>/',views.sortbyprice),
