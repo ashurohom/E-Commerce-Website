@@ -21,9 +21,17 @@
           {% if error %}
             <div class="alert alert-danger">
               {{error}}
-            </div>
+            </div>  
           {% endif %}
             
+
+          {% if success %}
+            <div class="alert alert-success">
+              {{success}}
+            </div>  
+          {% endif %}
+
+
           <h5 class="card-title">Product Details</h5><hr>
           <p class="card-text"><b>Product Name: </b>{{i.pname}}</p>
           <p class="card-text"><b>Category: </b>1</p>

@@ -14,14 +14,9 @@ def index(request):
     context['products']=products
     return render(request,'index.html',context)
 
-# def index(request):
-#     return render(request,'base.html')
 
 def about(request):
     return render(request,'about.html')
-
-# def home(request):
-#     return render(request,'home.html')
 
 
 # user Registration Page
@@ -100,28 +95,7 @@ def product_details(request,pid):
     return render(request,'product_details.html',context)
 
 
-def addtocart(request,pid):
 
-    product=Product.objects.filter(id=pid)
-    context={}
-    context['product']=product
-
-    if request.user.is_authenticated:
-        u=User.objects.filter(id=request.user.id)
-        p=Product.objects.filter(id=pid)
-        print(u[0],p[0]) #user name and product name
-        q1=Q(userid=u[0])
-        q2=Q(pid=p[0])
-        card=Card.objects.filter(q1 & q2)
-        if len(card)==1:
-            context['error'] = "Product Already in cart"   
-            return render(request,'product_details.html',context)
-        else:
-            return HttpResponse("Card Added")
-
-    else:
-        context['error']="Please Login First"
-        return render(request,'product_details.html',context)
 
 def my_order(request):
     return render(request,'myorder.html')
@@ -153,4 +127,33 @@ def pricefilter(request):
     context["products"] = product
     return render(request,'index.html',context)
 
-     
+
+
+
+def addtocart(request,pid):
+
+    product=Product.objects.filter(id=pid)
+    context={}
+    context['product']=product
+
+    if request.user.is_authenticated:
+        u=User.objects.filter(id=request.user.id)
+        p=Product.objects.filter(id=pid)
+        print(u[0],p[0]) #user name and product name
+        q1=Q(userid=u[0])
+        q2=Q(pid=p[0])
+        card=Card.objects.filter(q1 & q2)
+        if len(card)==1:
+            context['error'] = "Product Already in cart"   
+            return render(request,'product_details.html',context)
+        else:
+            card=Card.objects.create(userid=u[0],pid=p[0])
+            card.save()
+            context['success']="Product Added In Cart"
+            return render(request,'product_details.html',context)
+
+            
+
+    else:
+        context['error']="Please Login First"
+        return render(request,'product_details.html',context)
