@@ -161,5 +161,6 @@ def addtocart(request,pid):
 
 def viewcart(request):
     context={}
-    card=Card.objects.filter(userid=request.user.id)
+    cards=Card.objects.filter(userid=request.user.id)
+    context['cart']=cards
     return render(request,'cart.html',context)
