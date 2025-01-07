@@ -17,4 +17,4 @@ class Product(models.Model):
 class Card(models.Model):
     userid=models.ForeignKey('auth.User',on_delete=models.CASCADE,db_column='userid')
     pid=models.ForeignKey('Product',on_delete=models.CASCADE,db_column='pid') 
-    qty=models.ImageField(default=1)   
+    qty=models.IntegerField(default=1)   

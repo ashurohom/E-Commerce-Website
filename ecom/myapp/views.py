@@ -142,8 +142,8 @@ def addtocart(request,pid):
         print(u[0],p[0]) #user name and product name
         q1=Q(userid=u[0])
         q2=Q(pid=p[0])
-        card=Card.objects.filter(q1 & q2)
-        if len(card)==1:
+        c=Card.objects.filter(q1 & q2)
+        if len(c)==1:
             context['error'] = "Product Already in cart"   
             return render(request,'product_details.html',context)
         else:
