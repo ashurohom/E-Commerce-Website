@@ -14,6 +14,14 @@
   text-align: center;
   color:blueviolet
 }
+
+.p1{
+  color:black
+}
+
+.card-text{
+  color: black;
+}
 </style>
 
 <h1 class="h11">{{msg}}</h1>
@@ -22,9 +30,9 @@
         <div class="mt-5 p-3">
             
           <h4>Customer Details & Product Details</h4>
-          <p><strong>Customer Name:</strong> {{request.user.username}}</p>
-          <p><strong>Customer Email ID:</strong> {{request.user.email}}</p>
-          <p><strong>Customer Mobile:</strong> {{request.user.id}} </p>
+          <p class="p1"><strong>Customer Name:</strong> {{request.user.username}}</p>
+          <p class="p1"><strong>Customer Email ID:</strong> {{request.user.email}}</p>
+          <p class="p1"><strong>Customer Mobile:</strong> {{request.user.id}} </p>
         </div>
         
         
