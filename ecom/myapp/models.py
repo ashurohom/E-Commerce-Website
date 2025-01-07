@@ -15,6 +15,6 @@ class Product(models.Model):
         return self.pname
 
 class Card(models.Model):
-    userid=models.ForeignKey('auth.User',on_delete=models.CASCADE,db_column='userid')
+    userid=models.ForeignKey('auth.User',on_delete=models.CASCADE,db_column='userid') #direct access table not a cloumn
     pid=models.ForeignKey('Product',on_delete=models.CASCADE,db_column='pid') 
     qty=models.IntegerField(default=1)   

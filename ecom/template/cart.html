@@ -15,9 +15,9 @@
         <div class="mt-5 p-3">
             
           <h4>Customer Details & Product Details</h4>
-          <p><strong>Customer Name:</strong> Ashitosh Rohom</p>
-          <p><strong>Customer Email ID:</strong> ashitosh.rohom@gmail.com</p>
-          <p><strong>Customer Mobile:</strong> 9527230560</p>
+          <p><strong>Customer Name:</strong> {{request.user.username}}</p>
+          <p><strong>Customer Email ID:</strong> {{request.user.email}}</p>
+          <p><strong>Customer Mobile:</strong> {{request.user.id}} </p>
         </div>
         
         
@@ -55,7 +55,8 @@
           
             
           <div class="col-md-4">
-            <img src="{{c.pid.pimage.url}}" class="card-img-top" alt="...">                  
+            
+            <img src="{{c.pid.image.url}}" class="card-img-top" alt="...">                  
           </div>
 
           {% comment %} <div class="col-md-8">
@@ -78,7 +79,8 @@
 
 
           <div class="col-md-8 card-body">
-            <h5 class="card-title">{{c.pid.pname}}</h5>
+            <h1>{{c.pid.pname}} Details<h1><hr>
+            <h5 class="card-title">Name : {{c.pid.pname}}</h5>
             
           {% if c.pid.category == 1 %}
               <p class="card-text">category : <strong>Shoes</strong></p>
