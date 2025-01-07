@@ -13,7 +13,7 @@ body {
 .card {
     border: none;
     border-radius: 12px;
-    background-color: #fff;
+    background-color: #ffffff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 30px;
@@ -33,18 +33,20 @@ body {
 }
 
 .card-body {
-    padding: 20px;
+    padding: 5px;
+    text-align: center;
 }
 
 .card-title {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     color: #333;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .card-text {
-    font-size: 14px;
+    font-size: 10px;
     color: #666;
     margin-bottom: 10px;
 }
@@ -62,7 +64,7 @@ body {
     background-color: #007bff;
     border-color: #007bff;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
