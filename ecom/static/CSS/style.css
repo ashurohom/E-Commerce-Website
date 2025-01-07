@@ -26,6 +26,10 @@ body {
     margin-bottom: 20px;
 }
 
+.pp{
+    color: #000;
+}
+
 .li {
     text-decoration: none;
     color: #007bff;
@@ -77,7 +81,7 @@ form .form-group input {
     border-radius: 12px;
     object-fit: cover;
     height: 150px; /* Fixed height for the image */
-    width: 50%;
+    width: 100%;
 }
 
 .card-body {
