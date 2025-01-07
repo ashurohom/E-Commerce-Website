@@ -1,76 +1,101 @@
-/* Footer Base Styles */
+/* Footer Styles */
 footer {
-    background-color: #2d3436;
-    color: #dfe6e9;
+    background-color: #413d3d;
+    color: #fff;
     padding: 40px 0;
-    font-size: 1rem;
-    text-align: left;
+    font-family: Arial, sans-serif;
 }
 
-footer h4 {
-    font-size: 1.25rem;
-    color: #ffffff;
-    margin-bottom: 15px;
-    text-transform: uppercase;
+footer .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-footer hr {
-    border: 1px solid #b2bec3;
-    margin: 15px 0;
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-footer .col-md-4 {
-    margin-bottom: 20px;
+/* Address */
+footer .address h4, footer .quick-links h4, footer .social-media h4, p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
-footer .li {
-    color: #dfe6e9;
+footer .address p, footer .quick-links ul, footer .social-media .social-icon {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer .quick-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .quick-links li {
+    margin-bottom: 8px;
+}
+
+footer .quick-links a {
+    color: #fff;
     text-decoration: none;
-    padding: 5px 0;
     transition: color 0.3s ease;
 }
 
-footer .li:hover {
-    color: #00cec9;
+footer .quick-links a:hover {
+    color: #d9534f;
 }
 
-footer a {
-    color: #dfe6e9;
+/* Social Icons */
+footer .social-media {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+footer .social-media .social-icon {
+    color: #fff;
     transition: color 0.3s ease;
 }
 
-footer a:hover {
-    color: #00cec9;
+footer .social-media .social-icon:hover {
+    color: #d9534f;
 }
 
-footer svg {
-    fill: #dfe6e9;
-    margin: 10px;
-    transition: transform 0.3s ease, fill 0.3s ease;
+footer .social-media .bi {
+    width: 35px;
+    height: 35px;
 }
 
-footer svg:hover {
-    fill: #00cec9;
-    transform: scale(1.1);
+/* Footer Bottom */
+footer .footer-bottom {
+    background-color: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 20px 0;
 }
 
-/* Responsive Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
-    footer {
-        text-align: center;
+    footer .row {
+        flex-direction: column;
+        align-items: center;
     }
 
-    footer .col-md-4 {
+    footer .col-md-3 {
         margin-bottom: 30px;
-    }
-
-    footer a, footer .li {
         text-align: center;
-        display: block;
-        padding: 5px 0;
     }
 
-    footer svg {
-        margin: 10px auto;
+    footer .social-media {
+        justify-content: center;
+    }
+
+    footer .social-media .social-icon {
+        margin-right: 20px;
     }
 }
