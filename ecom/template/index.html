@@ -16,7 +16,7 @@
             </ul>
             <hr>
 
-            <p class="pp">Sort By Price</p>
+            <h4>Sort By Price</h4>
             <hr>
             <ul class="list-unstyled">
                 <li><a href="/sortbyprice/1/" class="li">High To Low</a></li>
@@ -24,7 +24,7 @@
             </ul>
             <hr>
 
-            <p class="pp">Filter By Price</p>
+           <h4>Filter By Price</h4>
             <hr>
             <form method="GET" action="/pricefilter/">
                 <div class="form-group">
@@ -40,11 +40,16 @@
         </div>
 
         <div class="col-md-9">
+          <div class="container">
             <div class="row">
-                {% for i in products %}
+
+
+              
+             
+                    {% for i in products %}
                     <div class="col-md-4 mb-4">
-                        <div class="card shadow-sm">
-                            <img src="{{ i.image.url }}" class="card-img-top" alt="..." height="200px">
+                        <div class="card">
+                            <img src="{{ i.image.url }}" class="card-img-top" alt="{{ i.pname }}" height="250px">
                             <div class="card-body">
                                 <h5 class="card-title">{{ i.pname }}</h5>
                                 <p class="card-text">
@@ -60,7 +65,14 @@
                             </div>
                         </div>
                     </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            
+
+
+
             </div>
         </div>
     </div>

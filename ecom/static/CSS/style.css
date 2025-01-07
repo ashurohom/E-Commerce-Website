@@ -3,62 +3,10 @@ body {
     font-family: 'Arial', sans-serif;
     color: #333;
     background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
     margin-top: 30px;
-}
-
-/* Filter Sidebar */
-.col-md-3 {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.col-md-3 h4 {
-    font-size: 22px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.pp{
-    color: #000;
-}
-
-.li {
-    text-decoration: none;
-    color: #007bff;
-    padding: 12px 0;
-    display: block;
-    font-size: 16px;
-}
-
-.li:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-form .form-group {
-    margin-bottom: 1.5rem;
-}
-
-form .form-group label {
-    font-size: 16px;
-    font-weight: 600;
-    color: #333;
-}
-
-form .form-group input {
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
 }
 
 /* Product Cards */
@@ -80,7 +28,7 @@ form .form-group input {
 .card-img-top {
     border-radius: 12px;
     object-fit: cover;
-    height: 150px; /* Fixed height for the image */
+    height: 250px; /* Fixed height for the image */
     width: 100%;
 }
 
@@ -126,15 +74,6 @@ form .form-group input {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .col-md-3 {
-        margin-bottom: 30px;
-    }
-
-    .col-md-9 .row {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
     .col-md-4 {
         flex: 1 0 50%; /* 2 items per row on tablet */
         margin-bottom: 30px;
