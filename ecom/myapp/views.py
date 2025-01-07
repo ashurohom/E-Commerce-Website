@@ -97,8 +97,7 @@ def product_details(request,pid):
 
 
 
-def my_order(request):
-    return render(request,'myorder.html')
+
 
 def filterbycategory(request, cid):
     context={}
@@ -157,3 +156,10 @@ def addtocart(request,pid):
     else:
         context['error']="Please Login First"
         return render(request,'product_details.html',context)
+    
+
+
+def viewcart(request):
+    context={}
+    card=Card.objects.filter(userid=request.user.id)
+    return render(request,'cart.html',context)

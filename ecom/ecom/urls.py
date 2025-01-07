@@ -28,9 +28,10 @@ urlpatterns = [
     path('logout/',views.ulogout),
     path('product_details/<pid>/',views.product_details),
     path('addtocart/<pid>/',views.addtocart),   
-    path('myorder/',views.my_order),
+    # path('myorder/',views.my_order),
     path('filterbycategory/<cid>/',views.filterbycategory),
     path('sortbyprice/<sid>/',views.sortbyprice),
     path("pricefilter/",views.pricefilter),
+    path('cart/',views.viewcart)
 ]
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
