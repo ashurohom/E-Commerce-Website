@@ -52,7 +52,7 @@
             <img src="{%static 'Image/bata.jpg'%}" class="card-img-top" alt="...">                  
           </div>
 
-          <div class="col-md-8">
+          {% comment %} <div class="col-md-8">
             <p><strong>Product Name:</strong> Bata Shoes</p>
             <p><strong>Category:</strong> Shoes</p>
             <p><strong>Price:</strong>1200</p>
@@ -67,7 +67,37 @@
           </div>
             <a href="" class="anchor"><button class="btn btn-danger">Remove</button></a>
       
+          </div> {% endcomment %}
+
+
+
+          <div class="col-md-8 card-body">
+            <h5 class="card-title">{{i.pname}}</h5>
+            
+          {% if i.category == 1 %}
+              <p class="card-text">category : <strong>Shoes</strong></p>
+            
+          {% elif i.category == 2%}
+            <p class="card-text">category : <strong>Mobile</strong></p>
+          
+          {% elif i.category == 3%}
+            <p class="card-text">category : <strong>Clothes</strong></p>
+          
+            {% elif i.category == 4%}
+            <p class="card-text">category : <strong>Watch</strong></p>
+
+            {% endif %}
+              
+            <p class="card-text">Price : <strong>{{i.offer_price}}</strong>&nbsp;<del>{{i.price}}</del></p>
+            <p class="card-text">category : {{i.description}}</p>
+
+            {% comment %} <a href="/product_details.html" class="btn btn-primary">See Details</a> {% endcomment %}
+            <a href="/product_details/{{i.id}}/" class="btn btn-primary">See Details</a>
           </div>
+
+
+
+
         </div>   
       </div> 
 </div>
