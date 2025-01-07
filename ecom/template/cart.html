@@ -9,7 +9,14 @@
 
 
 {% block main %}
+<style>
+.h11{
+  text-align: center;
+  color:blueviolet
+}
+</style>
 
+<h1 class="h11">{{msg}}</h1>
 <div class="row mt-4">
     <div class="col-md-9">
         <div class="mt-5 p-3">
@@ -100,7 +107,7 @@
             <p class="card-text">Description : {{c.pid.description}}</p>
 
             {% comment %} <a href="/product_details.html" class="btn btn-primary">See Details</a> {% endcomment %}
-            <a href="/product_details/{{c.id}}/" class="btn btn-primary">See Details</a>
+            <a href="/product_details/{{c.pid.id}}/" class="btn btn-primary">See Details</a>
           </div>
 
           {% endfor %}

@@ -162,5 +162,10 @@ def addtocart(request,pid):
 def viewcart(request):
     context={}
     cards=Card.objects.filter(userid=request.user.id)
-    context['cart']=cards
-    return render(request,'cart.html',context)
+    
+    if len(cards)==0:
+        context['msg']="No Items In Cart"
+        return render(request,'cart.html',context)
+    else:
+        context['cart']=cards
+        return render(request,'cart.html',context)
