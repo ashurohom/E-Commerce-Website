@@ -1,96 +1,68 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block main %}
-<div class="row">
-    <div class="col-md-3">Filter By Category<hr>
-      <ul type="none">
-        <a href="/"><li class="li">All</li></a>
-        <a href="/filterbycategory/1/"><li class="li">Shoes</li></a>
-        <a href="/filterbycategory/2/"><li class="li">Mobile</li></a>
-        <a href="/filterbycategory/3/"><li class="li">Clothes</li></a>
-        <a href="/filterbycategory/4/"><li class="li">Watch</li></a>
-      </ul>
-    
-      <p>Sort By Price</p><hr>
-    <ul type="none">
-      <a href="/sortbyprice/1/"><li class="li">High To Low</li></a>
-      <a href="/sortbyprice/0/"><li class="li">Low To High</li></a>
-    </ul>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Filter By Category</h4>
+            <hr>
+            <ul class="list-unstyled">
+                <li><a href="/" class="li">All</a></li>
+                <li><a href="/filterbycategory/1/" class="li">Shoes</a></li>
+                <li><a href="/filterbycategory/2/" class="li">Mobile</a></li>
+                <li><a href="/filterbycategory/3/" class="li">Clothes</a></li>
+                <li><a href="/filterbycategory/4/" class="li">Watch</a></li>
+            </ul>
+            <hr>
 
-    <p>Filter By Price</p><hr>
-    <!-- <ul type="none">
-      <a href="#"><li class="li">Under 500</li></a>
-      <a href="#"><li class="li">500 To 1000 </li></a>
-      <a href="#"><li class="li">1000 To 2000 </li></a>
-    </ul> -->
-    
-    
-    
-    <form method="GET" action="/pricefilter/">
-      <div class="md-3">
-        <label for="exampleInputEmail1" class="form-label">Max</label>
-        <input type="number" class="form-control" id="exampleInputEmail1" name="max" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text"></div>
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Min</label>
-        <input type="number" class="form-control" id="exampleInputPassword1" name="min" value="0">
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+            <p>Sort By Price</p>
+            <hr>
+            <ul class="list-unstyled">
+                <li><a href="/sortbyprice/1/" class="li">High To Low</a></li>
+                <li><a href="/sortbyprice/0/" class="li">Low To High</a></li>
+            </ul>
+            <hr>
 
-
-
-
-    
-  </div>
-    
-    <div class="col-md-9">
-      <div class="row">
-
-        
-      {% for i in products %}
-
-        <div class="card m-4 p-2" style="width: 18rem;">
-          <img src="{{i.image.url}}" class="card-img-top" alt="..." height="250px">
-            <div class="card-body">
-              <h5 class="card-title">{{i.pname}}</h5>
-              
-            {% if i.category == 1 %}
-                <p class="card-text">category : <strong>Shoes</strong></p>
-              
-            {% elif i.category == 2%}
-              <p class="card-text">category : <strong>Mobile</strong></p>
-            
-            {% elif i.category == 3%}
-              <p class="card-text">category : <strong>Clothes</strong></p>
-            
-              {% elif i.category == 4%}
-              <p class="card-text">category : <strong>Watch</strong></p>
-
-              {% endif %}
-                
-              <p class="card-text">Price : <strong>{{i.offer_price}}</strong>&nbsp;<del>{{i.price}}</del></p>
-              <p class="card-text">category : {{i.description}}</p>
-
-              {% comment %} <a href="/product_details.html" class="btn btn-primary">See Details</a> {% endcomment %}
-              <a href="/product_details/{{i.id}}/" class="btn btn-primary">See Details</a>
-            </div>
+            <p>Filter By Price</p>
+            <hr>
+            <form method="GET" action="/pricefilter/">
+                <div class="form-group">
+                    <label for="maxPrice">Max</label>
+                    <input type="number" class="form-control" id="maxPrice" name="max" placeholder="Enter max price">
+                </div>
+                <div class="form-group">
+                    <label for="minPrice">Min</label>
+                    <input type="number" class="form-control" id="minPrice" name="min" value="0" placeholder="Enter min price">
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Apply Filters</button>
+            </form>
         </div>
 
-      {% endfor %}
-
-
-       
-      </div>
+        <div class="col-md-9">
+            <div class="row">
+                {% for i in products %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card shadow-sm">
+                            <img src="{{ i.image.url }}" class="card-img-top" alt="..." height="200px">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ i.pname }}</h5>
+                                <p class="card-text">
+                                    {% if i.category == 1 %}<strong>Shoes</strong>
+                                    {% elif i.category == 2 %}<strong>Mobile</strong>
+                                    {% elif i.category == 3 %}<strong>Clothes</strong>
+                                    {% elif i.category == 4 %}<strong>Watch</strong>
+                                    {% endif %}
+                                </p>
+                                <p class="card-text">Price: <strong>{{ i.offer_price }}</strong> <del>{{ i.price }}</del></p>
+                                <p class="card-text">{{ i.description }}</p>
+                                <a href="/product_details/{{ i.id }}/" class="btn btn-primary">See Details</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-
 </div>
 {% endblock main %}
-    
