@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.contrib.auth.models import User     # for default table
 from django.contrib.auth import authenticate,login,logout
 from .models import Product,Card
+import datetime
 # Create your views here.
         
 # index page
@@ -162,10 +163,35 @@ def addtocart(request,pid):
 def viewcart(request):
     context={}
     cards=Card.objects.filter(userid=request.user.id)
+    saving_amt=0
+    total_amt=0
+
     
+    # datetime = datetime.datetime.now()
+    # context['time']=datetime
+
+
+
+    for cart in cards:
+        saving_amt += cart.pid.price - cart.pid.offer_price
+        total_amt += cart.pid.offer_price
+        context['saving']=saving_amt
+        context['amount']=total_amt
+        context['items']=len(cards)
+
     if len(cards)==0:
         context['msg']="No Items In Cart"
         return render(request,'cart.html',context)
     else:
         context['cart']=cards
         return render(request,'cart.html',context)
+    
+    
+def deletecart(request,pid):
+    context={}
+    cart=Card.objects.filter(id=pid)
+    cart.delete()
+    return redirect("/cart")
+    
+   
+
