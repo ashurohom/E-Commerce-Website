@@ -113,6 +113,7 @@
               
             <p class="card-text">Price : <strong>{{c.pid.offer_price}}</strong>&nbsp;<del>{{i.price}}</del></p>
             <p class="card-text">Description : {{c.pid.description}}</p>
+            <p class="card-text"><lable for="qty">Quantity : </lable><input type="number" value="{{Card.qty}}"><br><br>
 
             {% comment %} <a href="/product_details.html" class="btn btn-primary">See Details</a> {% endcomment %}
             <a href="/product_details/{{c.pid.id}}/" class="btn btn-primary">See Details</a>
