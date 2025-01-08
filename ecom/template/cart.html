@@ -44,9 +44,10 @@
     <!-- Price Detail Section -->
 
 
-
+    {% if items >= 1 %}
       <div class="col-md-3 mt-5 " id="cart">
       <!-- <div class="col-md-3 mt-5 shadow" id="cart">   // Only For Shadow Refrence-->
+       
         <h4>Price Details</h4>
         <hr>
         <p><strong>Total items :</strong> {{items}} </p>
@@ -55,6 +56,8 @@
         <a href="#" class="anchor"><button class="btn btn-success">Place Order</button></a>
 
       </div>
+
+      {% endif %}
 </div>
 
 
