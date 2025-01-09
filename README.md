@@ -6,7 +6,7 @@
  - Product Management: Admin section for managing product details and inventory.
  - User Interaction: A user interface for viewing products, adding to the cart, and completing purchases.
  - Discounts & Promotions: Displaying discounts and offers on products for enhanced user experience.
-Additionally, users can make purchases, support the site through donations, and contribute to a growing community. The site aims to create a dynamic ecosystem where shoppers can easily access 
+ Additionally, users can make purchases, support the site through donations, and contribute to a growing community. The site aims to create a dynamic ecosystem where shoppers can easily access 
    and manage their shopping needs.
 
 
@@ -19,9 +19,9 @@ Additionally, users can make purchases, support the site through donations, and 
 
 ## Usage
 
-- Admin can upload pet images and relevant information.
-- Users can browse available pets, view details, and adopt them by filling out a form.
-- Users can donate money through a dedicated donation button to support pet welfare.
+- Admin can upload product images and relevant information.
+- Users can browse available products, view details, and add them to their cart.
+- Users can view cart details including product prices, discounts, and checkout for final payment.
 
 ## Technologies Used
 
