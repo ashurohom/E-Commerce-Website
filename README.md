@@ -35,12 +35,10 @@
 
 - Implement user authentication using OAuth.
 - Optimize database performance.
-- Integrate a pet doctor feature for consultations and health check-ups.
-- Organize vaccination camps for pets to ensure their health and safety.
-- Provide a section for available pet food, where users can view and order pet supplies directly from the website.
-- Expand donation features to include recurring donations and payment gateways.
-
-
+- Integrate customer support features for product queries and assistance.
+- Expand product categories for better organization and discovery.
+- Introduce personalized recommendations based on user behavior.
+- Enhance checkout experience with additional payment gateways.
 
 
 
