@@ -3,11 +3,12 @@
 ## Overview
 **eCommerce Website** is a comprehensive online store platform dedicated to providing a seamless shopping experience. It allows users to browse and purchase products, manage orders, and support the site’s various features. The platform goes beyond shopping by offering additional functionalities such as:
 
- - Product Management: Admin section for managing product details and inventory.
- - User Interaction: A user interface for viewing products, adding to the cart, and completing purchases.
- - Discounts & Promotions: Displaying discounts and offers on products for enhanced user experience.
- Additionally, users can make purchases, support the site through donations, and contribute to a growing community. The site aims to create a dynamic ecosystem where shoppers can easily access 
-   and manage their shopping needs.
+- Product Management: Admin section for managing product details and inventory.
+- User Interaction: A user interface for viewing products, adding to the cart, and completing purchases.
+- Discounts & Promotions: Displaying discounts and offers on products for enhanced user experience.
+
+
+Additionally, users can make purchases, support the site through donations, and contribute to a growing community. The site aims to create a dynamic ecosystem where shoppers can easily access and manage their shopping needs.
 
 
 ## Features
