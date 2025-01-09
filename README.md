@@ -6,7 +6,7 @@
  - Product Management: Admin section for managing product details and inventory.
  - User Interaction: A user interface for viewing products, adding to the cart, and completing purchases.
  - Discounts & Promotions: Displaying discounts and offers on products for enhanced user experience.
- - Additionally, users can make purchases, support the site through donations, and contribute to a growing community. The site aims to create a dynamic ecosystem where shoppers can easily access 
+Additionally, users can make purchases, support the site through donations, and contribute to a growing community. The site aims to create a dynamic ecosystem where shoppers can easily access 
    and manage their shopping needs.
 
 
@@ -14,8 +14,8 @@
 
 - Responsive frontend design using HTML, Bootstrap, and CSS.
 - Backend development using Python and Django.
-- Admin panel for managing pet information.
-- User interface for adopting pets and making donations.
+- Admin panel for managing product information.
+- User interface for viewing products, adding to cart, and completing transactions.
 
 ## Usage
 
