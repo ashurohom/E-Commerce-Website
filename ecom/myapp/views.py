@@ -166,12 +166,6 @@ def viewcart(request):
     saving_amt=0
     total_amt=0
 
-    
-    # datetime = datetime.datetime.now()
-    # context['time']=datetime
-
-
-
     for cart in cards:
         saving_amt += cart.pid.price - cart.pid.offer_price
         total_amt += cart.pid.offer_price
