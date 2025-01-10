@@ -190,6 +190,16 @@ def deletecart(request,pid):
    
 
 def updateqty(request,x,cid):
-    print('X=',x)
-    print('CID=',cid)
+    # print('X=',x)
+    # print('CID=',cid)
+
+    cart=Card.objects.filter(id=cid)
+    quantity = cart[0].qty
+    print(quantity)
+    if x =='1':
+        quantity+=1
+    elif quantity >= '1':
+        quantity-=1
+
+    cart.update()             
     return redirect("/cart")

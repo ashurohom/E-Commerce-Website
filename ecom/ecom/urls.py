@@ -34,5 +34,6 @@ urlpatterns = [
     path("pricefilter/",views.pricefilter),
     path('cart/',views.viewcart),
     path('deletecart/<pid>/',views.deletecart),
+    path('updateqty/<x>/<cid>/',views.updateqty),
 ]
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
