@@ -165,13 +165,16 @@ def viewcart(request):
     cards=Card.objects.filter(userid=request.user.id)
     saving_amt=0
     total_amt=0
+    items=0
 
     for cart in cards:
-        saving_amt += cart.pid.price - cart.pid.offer_price
-        total_amt += cart.pid.offer_price
+        saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
+        total_amt += cart.pid.offer_price * cart.qty
+        items+=cart.qty
+
         context['saving']=saving_amt
         context['amount']=total_amt
-        context['items']=len(cards)
+        context['items']=items
 
     if len(cards)==0:
         context['msg']="No Items In Cart"
