@@ -188,8 +188,8 @@ def deletecart(request,pid):
     return redirect("/cart")
     
    
-
-def updateqty(request,x,cid):
+#update the product quantity
+def updateqty(request,x,cid): # x for value of 0 in cart <a href="/updateqty/0/{{c.id}}/">
     # print('X=',x)
     # print('CID=',cid)
 
@@ -198,8 +198,8 @@ def updateqty(request,x,cid):
     print(quantity)
     if x =='1':
         quantity+=1
-    elif quantity >= '1':
+    elif quantity > 1:
         quantity-=1
 
-    cart.update()             
+    cart.update(qty=quantity)             
     return redirect("/cart")
