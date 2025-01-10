@@ -18,3 +18,14 @@ class Card(models.Model):
     userid=models.ForeignKey('auth.User',on_delete=models.CASCADE,db_column='userid') #direct access table not a cloumn
     pid=models.ForeignKey('Product',on_delete=models.CASCADE,db_column='pid') 
     qty=models.IntegerField(default=1)   
+
+
+class Order(models.Model):
+    order_id=models.CharField(max_length=50)
+    user_id=models.ForeignKey("auth.User",on_delete=models.CASCADE,db_column="user_id")
+    p_id=models.ForeignKey("Product",on_delete=models.CASCADE,db_column="p_id")
+    qty=models.IntegerField(default=1)
+    amt=models.FloatField()
+
+    def __str__(self):
+        return self.order_id
