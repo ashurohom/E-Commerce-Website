@@ -190,4 +190,6 @@ def deletecart(request,pid):
    
 
 def updateqty(request,x,cid):
+    print('X=',x)
+    print('CID=',cid)
     return redirect("/cart")

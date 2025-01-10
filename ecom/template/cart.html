@@ -121,9 +121,9 @@
             <p class="card-text">Description : {{c.pid.description}}</p>
 
             <p class="card-text"><lable for="qty">Quantity : </lable>
-              <a href=""><button class="btn btn-danger">-</button></a>
+              <a href="updateqty/0/{{c.id}}/"><button class="btn btn-danger">-</button></a>
               <input type="number" value="{{c.qty}}">
-              <a href=""><button class="btn btn-danger">+</button></a>
+              <a href="updateqty/1/{{c.id}}/"><button class="btn btn-danger">+</button></a>
             </p><br><br>
 
             {% comment %} <a href="/product_details.html" class="btn btn-primary">See Details</a> {% endcomment %}
