@@ -210,3 +210,8 @@ def updateqty(request,x,cid): # x for value of 0 in cart <a href="/updateqty/0/{
 
 def order(request):
     return render(request,'myorder.html')
+
+def neworder(request):
+    return render(request,'placed_order.html')
+
+

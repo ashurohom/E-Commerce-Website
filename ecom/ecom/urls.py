@@ -36,5 +36,6 @@ urlpatterns = [
     path('deletecart/<pid>/',views.deletecart),
     path('updateqty/<x>/<cid>/',views.updateqty),
     path('order/',views.order),
+    path('neworder/',views.neworder),
 ]
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
