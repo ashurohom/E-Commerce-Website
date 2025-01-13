@@ -198,7 +198,7 @@ def updateqty(request,x,cid): # x for value of 0 in cart <a href="/updateqty/0/{
 
     cart=Card.objects.filter(id=cid)
     quantity = cart[0].qty
-    print(quantity)
+    # print(quantity)
     if x =='1':
         quantity+=1
     elif quantity > 1:
@@ -206,3 +206,7 @@ def updateqty(request,x,cid): # x for value of 0 in cart <a href="/updateqty/0/{
 
     cart.update(qty=quantity)             
     return redirect("/cart")
+
+
+def order(request):
+    return render(request,'placed_order.html')

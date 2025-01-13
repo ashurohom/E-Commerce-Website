@@ -28,4 +28,14 @@ class Order(models.Model):
     amt=models.FloatField()
 
     def __str__(self):
-        return self.order_id
+        return self.order_id # it return the only char value to the admin interface and user inetrface
+    
+    
+class Address(models.Model):
+    userid = models.ForeignKey("auth.User",on_delete=models.CASCADE, db_column="userid")
+    address = models.CharField(max_length=100)    
+    fullname = models.CharField(max_length=50)    
+    city = models.CharField(max_length=30)    
+    pincode = models.CharField(max_length=10)    
+    state = models.CharField(max_length=30)    
+    mobile = models.CharField(max_length=10)    
