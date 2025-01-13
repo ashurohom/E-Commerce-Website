@@ -1,24 +1,117 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
-
-
-{% block header %}
-<link rel="stylesheet" href="{% static 'css/placed_order.css'%}">
-{% endblock header %}
-
-
 {% block main %}
+<style>
+       
+      
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    input, textarea, select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .btn {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .btn:hover {
+        background-color: #b30900;
+    }
+    .summary {
+        margin-top: 20px;
+        padding: 15px;
+        background: #f1f1f1;
+        border-radius: 5px;
+    }
+    .summary p {
+        margin: 5px 0;
+    }
+</style>
+<div class="row">
+    <h1 style="text-align: center;"> Place your Order </h1>
 
+    <div class="col-md-6 shadow-sm p-3 mb-5 bg-body-tertiary rounded mx-auto ">
+        {% if msg %}
+            <div class="alert alert danger">
+                {{msg}}
 
-<div class="row m-3">
-    <div class="col-md-8">
-        Address
+            </div>
+        {% endif %}
+        
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="alert">
+                <h3>Enter your address</h3>
+
+            </div>
+                        <!-- Shipping Details -->
+            <div class="form-group">
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div class="form-group">
+                <label for="zipcode">Zip Code</label>
+                <input type="text" id="zipcode" name="zipcode" required>
+
+            </div>
+            <div class="form-group">
+                
+                <label for="mobile">Mobile</label>
+                <input type="text" id="mobbile" name="mobile" required>
+
+            </div>
+            
+            <button type="submit" class="btn btn-danger">Place Order</button>
+        </form>
+
+         
+
     </div>
-    <div class="col-md-4">
-        Total Amount
-    </div>
+
+    
+        
+    
+
 </div>
+
+    
+
+    
+    
+    
+    
+    
 
 
 {% endblock main %}
-
