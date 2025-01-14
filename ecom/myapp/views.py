@@ -214,4 +214,7 @@ def order(request):
 def neworder(request):
     return render(request,'placed_order.html')
 
+def checkaddress(request):
+    return render(request,checkaddress.html)
+
 

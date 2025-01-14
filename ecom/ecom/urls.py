@@ -37,5 +37,6 @@ urlpatterns = [
     path('updateqty/<x>/<cid>/',views.updateqty),
     path('order/',views.order),
     path('neworder/',views.neworder),
+    path('checkaddress/',views.checkaddress),
 ]
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
