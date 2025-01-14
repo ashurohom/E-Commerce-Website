@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.db.models import Q
 from django.contrib.auth.models import User     # for default table
 from django.contrib.auth import authenticate,login,logout
-from .models import Product,Card
+from .models import Product,Card,Address
 import datetime
 # Create your views here.
         
@@ -215,6 +215,19 @@ def neworder(request):
     return render(request,'placed_order.html')
 
 def checkaddress(request):
-    return render(request,checkaddress.html)
+    u = User.objects.filter(id=request.user.id)
+    add = Address.objects.filter(user_id = u[0])
+    if len(add) >= 1:
+        return redirect('/placeorder')
+    else:
+        if request.method == 'POST':
+            fn=request.POST["full_name"]
+            ad=request.POST["address"]
+            ct=request.POST["city"]
+            st=request.POST["state"]
+            zp=request.POST["zipcode"]
+            mob=request.POST["mobile"]
+            return HttpResponse(fn) 
+    return render(request,'address.html')
 
 
