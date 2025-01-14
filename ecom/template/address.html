@@ -50,9 +50,9 @@
     <h1 style="text-align: center;"> Place your Order </h1>
 
     <div class="col-md-6 shadow-sm p-3 mb-5 bg-body-tertiary rounded mx-auto ">
-        {% if msg %}
-            <div class="alert alert danger">
-                {{msg}}
+        {% if error_msg %}
+            <div class="alert alert-danger">
+                {{error_msg}}
 
             </div>
         {% endif %}
@@ -92,7 +92,7 @@
 
             </div>
             
-            <button type="submit" class="btn btn-danger">Place Order</button>
+            <a href="/placeorder"><button type="submit" class="btn btn-danger">Place Order</button></a>
         </form>
 
          

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block main %}
+<div class="row m-3">
+    <div class="col-md-9">
+        Address : <br>
+        {% for i in address %}
+
+        <h4>
+        
+        Name : <b>{{i.fullname}}</b><br>
+        Address : <b>{{i.address}}</b>
+        City : <b>{{i.city}}</b><br>
+        PinCode : <b>{{i.pincode}}</b>
+        State : <b>{{i.state}}</b>
+        Mobile : <b>{{i.mobile}}</b>
+        <h4>
+          
+        {% endfor %}
+    </div>
+
+    <div class="col-md-3">
+
+        <div  id="cart">
+            <!-- <div class="col-md-3 mt-5 shadow" id="cart">   // Only For Shadow Refrence-->
+             
+              <h4>Price Details</h4>
+              <hr>
+              <p><strong>Total items :</strong> {{items}} </p>
+              <p><strong>Total Amount :</strong> {{amount}} Rs. </p>
+              <p><strong>Saving Amount :</strong> {{saving}} Rs. </p>
+              <a href="/fetchorder" class="anchor"><button class="btn btn-success">Place Order</button></a>
+            </div>
+
+    </div>
+</div>
+{% endblock main %}

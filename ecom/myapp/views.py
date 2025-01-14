@@ -216,6 +216,7 @@ def neworder(request):
     return render(request,'placed_order.html')
 
 def checkaddress(request):
+    context={}
     u = User.objects.filter(id=request.user.id)
     add = Address.objects.filter(userid = u[0])
     if len(add) >= 1:
@@ -228,8 +229,22 @@ def checkaddress(request):
             st=request.POST["state"]
             zp=request.POST["zipcode"]
             mob=request.POST["mobile"]
-            return HttpResponse(fn+ad+ct+st+zp+mob) 
+            if re.match('[6-9]\d{9}',mob):
+                obj = Address.objects.create(userid = u[0],fullname=fn,address=ad,city=ct,state=st,pincode=zp,mobile=mob)
+                obj.save()
+                return redirect('/placeorder')
+                # return HttpResponse(fn+ad+ct+st+zp+mob) 
+            else:
+                context["error_msg"] = "Warning : Incorrect Mobile Number Please Enter Valid Mobile Number"
+                return render(request,'address.html',context)
+
         else:
             return render(request,'address.html')
 
 
+def placeorder(request):
+    context={}
+    u = User.objects.filter(id=request.user.id) # for current user
+    address = Address.objects.filter(userid = u[0])
+    context['address']=address
+    return render(request,'placeorder.html',context)
