@@ -5,6 +5,7 @@ from django.contrib.auth.models import User     # for default table
 from django.contrib.auth import authenticate,login,logout
 from .models import Product,Card,Address
 import datetime
+import re
 # Create your views here.
         
 # index page
@@ -216,7 +217,7 @@ def neworder(request):
 
 def checkaddress(request):
     u = User.objects.filter(id=request.user.id)
-    add = Address.objects.filter(user_id = u[0])
+    add = Address.objects.filter(userid = u[0])
     if len(add) >= 1:
         return redirect('/placeorder')
     else:
@@ -227,7 +228,8 @@ def checkaddress(request):
             st=request.POST["state"]
             zp=request.POST["zipcode"]
             mob=request.POST["mobile"]
-            return HttpResponse(fn) 
-    return render(request,'address.html')
+            return HttpResponse(fn+ad+ct+st+zp+mob) 
+        else:
+            return render(request,'address.html')
 
 
