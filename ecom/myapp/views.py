@@ -247,7 +247,8 @@ def placeorder(request):
     carts=Card.objects.filter(userid=request.user.id)
     for i in carts:
         oid = random.randint(1111,9999)
-        totalamt = i.pid.price*i.qty
+        totalamt = i.pid.offer_price*i.qty
+
         order = Order.objects.create(order_id=oid,user_id=i.userid,p_id=i.pid,amt=totalamt,qty=i.qty)
         order.save()
     return redirect('/fetchorder')
@@ -257,7 +258,27 @@ def placeorder(request):
 def fetchorder(request):
     context={}
     u = User.objects.filter(id=request.user.id) # for current user\
+    carts=Card.objects.filter(userid=request.user.id)
     
     address = Address.objects.filter(userid = u[0])
     context['address']=address
+    
+
+
+    cards=Card.objects.filter(userid=request.user.id)
+    saving_amt=0
+    total_amt=0
+    items=0
+
+    for cart in cards:
+        saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
+        total_amt += cart.pid.offer_price * cart.qty
+        items+=cart.qty
+
+        context['saving']=saving_amt
+        context['amount']=total_amt
+        context['items']=items
+        
+
+
     return render(request,'placeorder.html',context)
