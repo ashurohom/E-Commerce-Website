@@ -250,8 +250,7 @@ def placeorder(request):
         totalamt = i.pid.price*i.qty
         order = Order.objects.create(order_id=oid,user_id=i.userid,p_id=i.pid,amt=totalamt,qty=i.qty)
         order.save()
-        
-
+    return redirect('/fetchorder')
 
 
 
