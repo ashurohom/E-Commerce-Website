@@ -3,9 +3,10 @@ from django.http import HttpResponse
 from django.db.models import Q
 from django.contrib.auth.models import User     # for default table
 from django.contrib.auth import authenticate,login,logout
-from .models import Product,Card,Address
+from .models import Product,Card,Address,Order
 import datetime
 import re
+import random
 # Create your views here.
         
 # index page
@@ -244,6 +245,12 @@ def checkaddress(request):
 
 def placeorder(request):
     carts=Card.objects.filter(userid=request.user.id)
+    for i in carts:
+        oid = random.randint(1111,9999)
+        totalamt = i.pid.price*i.qty
+        order = Order.objects.create(order_id=oid,user_id=i.userid,p_id=i.pid,amt=totalamt,qty=i.qty)
+        order.save()
+        
 
 
 
