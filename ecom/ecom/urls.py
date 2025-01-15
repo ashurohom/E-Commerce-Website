@@ -38,6 +38,6 @@ urlpatterns = [
     path('order/',views.order),
     path('neworder/',views.neworder),
     path('checkaddress/',views.checkaddress),
-    path('placeorder/',views.placeorder),
+    path('fetchorder/',views.fetchorder),
 ]
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

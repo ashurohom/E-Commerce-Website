@@ -4,17 +4,16 @@
 
 {% block main %}
 <div class="row m-3">
-    <div class="col-md-9">
-        Address : <br>
+    <div class="col-md-9 mx-auto">
+        Delivery Address<br>
         {% for i in address %}
 
         <h4>
         
         Name : <b>{{i.fullname}}</b><br>
         Address : <b>{{i.address}}</b>
-        City : <b>{{i.city}}</b><br>
-        PinCode : <b>{{i.pincode}}</b>
-        State : <b>{{i.state}}</b>
+        City : <b>{{i.city}}(<b>{{i.pincode}}</b>)</b><br>
+        State : <b>{{i.state}}</b><br>
         Mobile : <b>{{i.mobile}}</b>
         <h4>
           

@@ -140,7 +140,7 @@ def addtocart(request,pid):
     if request.user.is_authenticated:
         u=User.objects.filter(id=request.user.id)
         p=Product.objects.filter(id=pid)
-        print(u[0],p[0]) #user name and product name
+        #print(u[0],p[0]) #user name and product name
         q1=Q(userid=u[0])
         q2=Q(pid=p[0])
         c=Card.objects.filter(q1 & q2)
@@ -243,8 +243,15 @@ def checkaddress(request):
 
 
 def placeorder(request):
+    carts=Card.objects.filter(userid=request.user.id)
+
+
+
+
+def fetchorder(request):
     context={}
-    u = User.objects.filter(id=request.user.id) # for current user
+    u = User.objects.filter(id=request.user.id) # for current user\
+    
     address = Address.objects.filter(userid = u[0])
     context['address']=address
     return render(request,'placeorder.html',context)
