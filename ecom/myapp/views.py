@@ -7,6 +7,7 @@ from .models import Product,Card,Address,Order
 import datetime
 import re
 import random
+import razorpay
 # Create your views here.
         
 # index page
@@ -230,7 +231,7 @@ def checkaddress(request):
             st=request.POST["state"]
             zp=request.POST["zipcode"]
             mob=request.POST["mobile"]
-            if re.match('[6-9]\d{9}',mob):
+            if re.match("[6-9]\d{9}",mob):
                 obj = Address.objects.create(userid = u[0],fullname=fn,address=ad,city=ct,state=st,pincode=zp,mobile=mob)
                 obj.save()
                 return redirect('/placeorder')
@@ -279,6 +280,22 @@ def fetchorder(request):
         context['amount']=total_amt
         context['items']=items
         
-
-
     return render(request,'placeorder.html',context)
+
+def makepayment(request):
+    context={}
+    u=User.objects.filter(id=request.user.id)
+    orders=Order.objects.filter(userid=u)
+    sum=0
+
+    for order in orders:
+        sum+=order.amt
+        orderid=order.order_id
+
+
+
+    client = razorpay.Client(auth=("rzp_test_2zJjEbeRT0fAQQ","4tEfDY2fzqhAENnHpl7S03L2"))
+    data = {"amount":sum*100, "currency":"INR", "receipt":orderid}
+    payment = client.order.create(data=data)
+    context['payment']=payment
+    return render(request,'pay.html',context)
