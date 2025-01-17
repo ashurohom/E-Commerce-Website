@@ -252,6 +252,7 @@ def placeorder(request):
 
         order = Order.objects.create(order_id=oid,user_id=i.userid,p_id=i.pid,amt=totalamt,qty=i.qty)
         order.save()
+    carts.delete()    
     return redirect('/fetchorder')
 
 
@@ -285,17 +286,16 @@ def fetchorder(request):
 def makepayment(request):
     context={}
     u=User.objects.filter(id=request.user.id)
-    orders=Order.objects.filter(userid=u)
+    orders=Order.objects.filter(user_id=u[0])
     sum=0
 
     for order in orders:
         sum+=order.amt
         orderid=order.order_id
 
-
-
     client = razorpay.Client(auth=("rzp_test_2zJjEbeRT0fAQQ","4tEfDY2fzqhAENnHpl7S03L2"))
     data = {"amount":sum*100, "currency":"INR", "receipt":orderid}
     payment = client.order.create(data=data)
     context['payment']=payment
+    context['order']=orders
     return render(request,'pay.html',context)
