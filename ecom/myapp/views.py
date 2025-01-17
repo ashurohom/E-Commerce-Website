@@ -41,7 +41,7 @@ def register(request):
                 context['error_msg']="Pasword Doesnot Match"
                 return render(request,'register.html',context)
             
-            elif len(p) <=8 or len(rp) <= 8:
+            elif len(p) <8 or len(rp) <8:
                 context['error_msg']="Pasword Contain Atleast 8 Character"
                 return render(request,'register.html',context)
             
@@ -80,7 +80,7 @@ def ulogin(request):
                     return redirect('/')
                     
                 else:
-                    context['error_msg']="Invalid Username And Password"
+                    context['error_msg']="Invalid Username Or Password"
                     return render(request,'ulogin.html',context)
                     
     else:
