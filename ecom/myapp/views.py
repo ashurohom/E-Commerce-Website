@@ -293,6 +293,10 @@ def makepayment(request):
         sum+=order.amt
         orderid=order.order_id
 
+    for user in u:
+        name = user.username
+        email = user.email
+
     client = razorpay.Client(auth=("rzp_test_2zJjEbeRT0fAQQ","4tEfDY2fzqhAENnHpl7S03L2"))
     data = {"amount":sum*100, "currency":"INR", "receipt":orderid}
     payment = client.order.create(data=data)
