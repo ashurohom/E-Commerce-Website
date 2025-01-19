@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="{% static 'CSS/header.css' %}">
     <link rel="stylesheet" href="{% static 'CSS/footer.css' %}">
 
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <link rel="stylesheet" href="{% static 'css/register.css'%}">
     <link rel="stylesheet" href="{% static 'css/ulogin.css'%}">
     <link rel="stylesheet" href="{% static 'css/product.css'%}">
@@ -16,6 +15,9 @@
     <link rel="stylesheet" href="{% static 'css/placed_order.css'%}">
 {% endblock header %}
 
+{% block body %}
+<link rel="stylesheet" href="{% static 'css/styles.css'%}">
+{% endblock body %}
 
 
 {% block main %}

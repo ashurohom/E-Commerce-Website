@@ -1,53 +1,110 @@
 /* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
+    font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+/* Container Styling */
 .container {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
-/* Product Cards */
-.card {
+/* Sidebar Styling */
+.col-md-2 h4 {
+    color: #007bff;
+    font-weight: bold;
+}
+
+.col-md-2 hr {
+    border: 1px solid #ddd;
+}
+
+.col-md-2 ul li {
+    margin: 10px 0;
+}
+
+.col-md-2 ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.col-md-2 ul li a:hover {
+    color: #007bff;
+}
+
+/* Filter Form Styling */
+.form-group label {
+    font-weight: bold;
+    color: #555;
+}
+
+.form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.btn-primary {
+    background-color: #007bff;
     border: none;
-    border-radius: 12px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Card Body Section */
+.cardbody {
+    padding: 15px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    margin-bottom: 20px;
+    height: 100%;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
-    border-radius: 12px;
+    width: 50%;
+    height: 100px; /* Adjust height for consistent card design */
     object-fit: cover;
-    height: 250px; /* Fixed height for the image */
-    width: 100%;
+    border-bottom: 1px solid #ddd;
 }
 
 .card-body {
-    padding: 5px;
+    padding: 15px;
     text-align: center;
 }
 
 .card-title {
-    font-size: 15px;
-    font-weight: 700;
-    color: #333;
+    font-size: 18px;
+    color: #007bff;
     margin-bottom: 10px;
-    text-align: center;
+}
+
+.card-title:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
 .card-text {
-    font-size: 10px;
-    color: #666;
+    font-size: 14px;
+    color: #555;
     margin-bottom: 10px;
 }
 
@@ -57,49 +114,45 @@ body {
 
 .card-text del {
     color: #999;
-    text-decoration: line-through;
 }
 
-.btn-primary {
+.btn {
     background-color: #007bff;
-    border-color: #007bff;
-    padding: 10px 20px;
-    font-size: 10px;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
     border-radius: 5px;
+    font-size: 14px;
     transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn:hover {
     background-color: #0056b3;
-    border-color: #004085;
+    color: #fff;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .col-md-4 {
-        flex: 1 0 50%; /* 2 items per row on tablet */
-        margin-bottom: 30px;
+    .col-md-2 {
+        display: none; /* Hide the sidebar on smaller screens */
+    }
+
+    .col-md-10 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .card-img-top {
+        height: 150px; /* Adjust image height for smaller screens */
     }
 }
 
 @media (max-width: 576px) {
-    .card-img-top {
-        height: 200px; /* Reduced height for smaller screens */
+    .card {
+        margin-bottom: 15px;
     }
 
     .card-body {
-        padding: 15px;
-    }
-
-    .card-title {
-        font-size: 18px;
-    }
-
-    .card-text {
-        font-size: 13px;
-    }
-
-    .col-md-4 {
-        flex: 1 0 100%; /* 1 item per row on small screens */
+        padding: 10px;
     }
 }
