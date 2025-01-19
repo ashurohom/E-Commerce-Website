@@ -14,7 +14,7 @@
   <div class="row">
     <nav class="navbar navbar-expand-lg bg-body-sbtl" style="background-color: #d1d8cf;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Amazon </a>
+          <a class="navbar-brand" href="#">EasyMart</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -30,11 +30,16 @@
                 <a class="nav-link" href="/about">About US</a>
               </li>
               
-             
+              <li class="nav-item">
+                <a class="nav-link" href="/cart">My carts</a>
+              </li>
               
               
               {% if request.user.is_authenticated %}
                 
+              <li class="nav-item">
+                <a class="nav-link" href="/order">MyOrders</a>
+              </li>
               
                 
               <li class="nav-item">
@@ -54,36 +59,30 @@
               
               
               
-              <li class="nav-item">
-                <a class="nav-link" href="/cart">My carts</a>
-              </li>
+            
 
               
               
               {% if request.user.is_authenticated %}
               
-              <li class="nav-item">
-                <a class="nav-link" href="/order">MyOrders</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/neworder">NewOrders</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/product_details">Product_details</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link" href="/details">{{username}} </a>
-              </li>
              
               
-
+              {% comment %} <li class="nav-item">
+                <a class="nav-link" href="/product_details">Product_details</a>
+              </li> {% endcomment %}
+              
+              {% comment %} <li class="nav-item">
+                <a class="nav-link" href="/details">{{username}} </a>
+              </li> {% endcomment %}
+             
+              
+              <li class="nav-item">
+                <a class="nav-link" href="">WelCome - {{request.user.username}}</a>
+              </li>
 
               {% endif %}
 
-              <li class="nav-item">
-                <a class="nav-link" href="/login">WelCome - {{request.user.username}}</a>
-              </li>
+              
              
             </ul>
           
