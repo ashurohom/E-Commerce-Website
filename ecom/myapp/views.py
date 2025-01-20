@@ -313,7 +313,7 @@ def email_send(request):
         "ashitosh.rohom@gmail.com",
         ['ashitoshrohom1829@gmail.com'],
         )
-    return HttpResponse("Confirmation Mail Has Been Send !")
+    return redirect('/order_history')
 
 
 
@@ -326,8 +326,7 @@ def order_history(request):
         a+=x.fullname + "" + x.address + "" + x.city + "" + x.state + "" + x.pincode
 
     for i in orders:
-        myorder=History.object.create(order_id=i.id, userid=user[0], amount=i.amount, address=a, status="Delivered")
+        myorder=History.objects.create(order_id=orders[0], userid=user[0], amount=i.amt, address=a, status="Delivered")
         myorder.save()
-
-
-    return render(request,'myorders.html')
+    # return redirect('/')
+    return HttpResponse("Your History Created !")
