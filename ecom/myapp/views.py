@@ -311,6 +311,11 @@ def email_send(request):
         "EasyMart Order Confirmation",
         "Your Order Is Confirm \n Thank You",
         "ashitosh.rohom@gmail.com",
-        "ashitoshrohom1829@gmail.com",
+        ['ashitoshrohom1829@gmail.com'],
         )
     return HttpResponse("Confirmation Mail Has Been Send !")
+
+
+
+def order_history(request):
+    return render(request,'myorders.html')
