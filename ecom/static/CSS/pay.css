@@ -9,27 +9,42 @@ body {
 
 /* Payment Page Container */
 .payment-container {
-    margin: 30px auto;
-    max-width: 1000px;
-    padding: 20px;
-    margin-right: 30rem;
-    margin-left: 20px;
-    background: #000000;
+    margin: 30px auto; /* Centers the container horizontally */
+    max-width: 600px; /* Reduce the width for a centered focus */
+    padding: 30px;
+    background: #242424; /* Black background */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centers text inside the container */
 }
 
-/* Section Styling */
-.order-summary, .payment-section {
+/* Payment Section Styling */
+.payment-section {
     padding: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    margin-bottom: 20px;
-    background-color: #fafafa;
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* Center the button inside the payment section */
+.payment-section button {
+    display: block;
+    margin: 20px auto; /* Centers the button horizontally */
+    padding: 10px 20px;
+    background-color: #3399cc; /* Razorpay theme color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.payment-section button:hover {
+    background-color: #287ca2; /* Darker shade on hover */
+}
+
 
 /* Headings */
 .order-summary h2, .payment-section h2 {
