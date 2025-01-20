@@ -39,3 +39,14 @@ class Address(models.Model):
     pincode = models.CharField(max_length=10)    
     state = models.CharField(max_length=30)    
     mobile = models.CharField(max_length=10)    
+
+class History(models.Model):
+    order_id = models.ForeignKey('Order',on_delete=models.CASCADE, db_column="order_id")
+    userid = models.ForeignKey("auth.User",on_delete=models.CASCADE, db_column="userid")
+    amount=models.FloatField()
+    address = models.CharField(max_length=300)
+    status = models.CharField(max_length=30)
+    
+
+    
+
