@@ -304,3 +304,13 @@ def makepayment(request):
     context['payment']=payment
     context['order']=orders
     return render(request,'pay.html',context)
+
+
+def email_send(request):
+    send_mail(
+        "EasyMart Order Confirmation",
+        "Your Order Is Confirm \n Thank You",
+        "ashitosh.rohom@gmail.com",
+        "ashitoshrohom1829@gmail.com",
+        )
+    return HttpResponse("Confirmation Mail Has Been Send !")
