@@ -253,7 +253,7 @@ def placeorder(request):
 
         order = Order.objects.create(order_id=oid,user_id=i.userid,p_id=i.pid,amt=totalamt,qty=i.qty)
         order.save()
-    carts.delete()    
+    # carts.delete()    
     return redirect('/fetchorder')
 
 
