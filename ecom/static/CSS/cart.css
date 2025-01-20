@@ -13,7 +13,16 @@ a {
     margin-bottom: 20px;
 }
 
+.unique-style-7 {
+    margin-left: 50px;
+    margin-right: 100px;
+}
 
+.unique-style-8 {
+    /* Keep existing styling */
+}
+
+/* Updated Unique-Style-9 for dark theme */
 .unique-style-9 {
     margin: 20px auto;
     background-color: rgba(30, 30, 30, 0.9);  /* Dark semi-transparent background */
@@ -31,11 +40,7 @@ a {
     color: white;
 }
 
-
-
-
-
-/* Cart Section Styling */
+/* Updated Unique-Style-10 for dark theme */
 #cart {
     margin-bottom: 20px;
     background-color: rgba(45, 45, 45, 0.8);  /* Dark semi-transparent background */
@@ -61,7 +66,6 @@ a {
 #cart .btn-success:hover {
     background-color: #218838;  /* Darker green on hover */
 }
-
 
 #order-summary {
     height: 50px;
