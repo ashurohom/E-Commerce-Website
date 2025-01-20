@@ -321,9 +321,13 @@ def order_history(request):
     user=User.objects.filter(id=request.user.id)
     orders=Order.objects.filter(user_id=user[0])
     addr=Address.objects.filter(userid=user[0])
+    a=""
+    for x in addr:
+        a+=x.fullname + "" + x.address + "" + x.city + "" + x.state + "" + x.pincode
 
     for i in orders:
-        myorder=History.object.create(order_id=i.id, userid=user[0], amount=i.amount,  )
+        myorder=History.object.create(order_id=i.id, userid=user[0], amount=i.amount, address=a, status="Delivered")
+        myorder.save()
 
 
     return render(request,'myorders.html')
