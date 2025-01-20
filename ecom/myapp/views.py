@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.db.models import Q
 from django.contrib.auth.models import User     # for default table
 from django.contrib.auth import authenticate,login,logout
-from .models import Product,Card,Address,Order
+from .models import Product,Card,Address,Order,History
 import datetime
 import re
 import random
@@ -318,4 +318,12 @@ def email_send(request):
 
 
 def order_history(request):
+    user=User.objects.filter(id=request.user.id)
+    orders=Order.objects.filter(user_id=user[0])
+    addr=Address.objects.filter(userid=user[0])
+
+    for i in orders:
+        myorder=History.object.create(order_id=i.id, userid=user[0], amount=i.amount,  )
+
+
     return render(request,'myorders.html')
