@@ -1,0 +1,101 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Delivery Address Styling */
+.unique-style-14 {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd; /* Border for delivery address section */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.unique-style-14 h4 {
+    color: #333;
+    margin: 10px 0;
+}
+
+.unique-style-14 b {
+    color: #555;
+}
+
+/* Price Details Section Styling */
+.unique-style-15 {
+    margin-top: 0px;
+}
+
+#cart {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+#cart h4 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+#cart p {
+    color: #555;
+    margin: 5px 0;
+}
+
+#cart .btn-success {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#cart .btn-success:hover {
+    background-color: #218838;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .unique-style-14, 
+    #cart {
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    .unique-style-15 {
+        margin-top: 10px;
+    }
+
+    #cart .btn-success {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .unique-style-14 {
+        padding: 10px;
+    }
+
+    #cart {
+        padding: 10px;
+    }
+
+    #cart h4 {
+        font-size: 1rem;
+    }
+
+    #cart p {
+        font-size: 0.9rem;
+    }
+}

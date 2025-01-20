@@ -2,10 +2,14 @@
 
 {% load static %}
 
+{% block header %}
+    <link rel="stylesheet" href="{% static 'CSS/placed_order.css'%}">
+{% endblock header %}
+
 {% block main %}
 <div class="row m-3">
     <div class="col-md-9 mx-auto unique-style-14">
-        Delivery Address<br>
+        <h2>Delivery Address<h2>
         {% for i in address %}
 
         <h4>
