@@ -5,92 +5,91 @@
     box-sizing: border-box;
 }
 
-/* Body Styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-}
-
 /* Card Container */
-.cards {
+.unique-style-3 {
     margin: 20px auto;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 740px;
+    padding: 15px;
+    font-family: Arial, sans-serif;
 }
 
 /* Row Styling */
-.row {
+.unique-style-3 .row {
     display: flex;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 /* Image Column */
-.unique-style-4 img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px 0 0 8px;
+.unique-style-4 {
+    flex: 1 1 40%;
+    text-align: center;
 }
 
-/* Text Column */
+.unique-style-4 img {
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Content Column */
 .unique-style-5 {
+    flex: 1 1 60%;
+}
+
+.unique-style-5 .card-body {
     padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 /* Card Title */
-.card-title {
+.unique-style-5 .card-title {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #d9534f; /* Bootstrap danger color */
+    color: #ff0000;
+    text-transform: uppercase;
 }
 
 /* Card Text */
-.card-text {
+.unique-style-5 .card-text {
     margin-bottom: 10px;
     font-size: 1rem;
-    color: #555;
+    color: #ff0000;
 }
 
 /* Buttons */
-#button {
+.unique-style-5 a button {
     background-color: #d9534f;
     border: none;
     padding: 10px 20px;
-    margin-right: 10px;
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-right: 10px;
 }
 
-#button:hover {
+.unique-style-5 a button:hover {
     background-color: #c9302c;
 }
 
 /* Alerts */
-.alert {
+.unique-style-5 .alert {
     padding: 10px 15px;
     border-radius: 4px;
     margin-bottom: 15px;
     font-size: 0.9rem;
 }
 
-.alert-danger {
+.unique-style-5 .alert-danger {
     background-color: #f8d7da;
     color: #721c24;
     border: 1px solid #f5c6cb;
 }
 
-.alert-success {
+.unique-style-5 .alert-success {
     background-color: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
@@ -98,30 +97,11 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .row {
+    .unique-style-3 .row {
         flex-direction: column;
     }
 
-    .unique-style-4 img {
-        border-radius: 8px 8px 0 0;
-    }
-
-    .unique-style-5 {
-        padding: 15px 10px;
-    }
-
-    #button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 576px) {
-    .card-title {
-        font-size: 1.2rem;
-    }
-
-    .card-text {
-        font-size: 0.9rem;
+    .unique-style-4, .unique-style-5 {
+        flex: 1 1 100%;
     }
 }

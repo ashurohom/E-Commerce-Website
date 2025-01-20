@@ -2,8 +2,13 @@
 {% load static %}
 
 
-{% block main %}
+{% block header %}  
+<link rel="stylesheet" href="{% static 'css/product.css' %}">
+{% endblock header %}
 
+
+
+{% block main %}
 
 <div class="card mb-3 unique-style-3" style="max-width: 740px;"id="card">
     <div class="row g-0">
@@ -32,14 +37,14 @@
           {% endif %}
 
 
-          <h5 class="card-title">Product Details</h5><hr>
-          <p class="card-text"><b>Product Name: </b>{{i.pname}}</p>
-          <p class="card-text"><b>Category: </b>1</p>
-          <p class="card-text"><b>Price: </b>2000.0 &nbsp; <del>4000Rs </del>(50% off)</p>
-          <p class="card-text"><b>Color: </b>&nbsp;&nbsp;Red &nbsp;&nbsp; Black &nbsp;&nbsp; white </p>
-          <p class="card-text"><b>Size: </b>&nbsp;&nbsp;7 &nbsp;&nbsp; 8 &nbsp;&nbsp; 9 &nbsp;&nbsp; 10 &nbsp;&nbsp; 11 </p>
+          <h5 class="card-titles">Product Details</h5><hr>
+          <h5 class="card-texts"><b>Product Name: </b>{{i.pname}}</h5>
+          <h5 class="card-texts"><b>Category: </b>1</p>
+          <h5 class="card-texts"><b>Price: </b>2000.0 &nbsp; <del>4000Rs </del>(50% off)</h5>
+          <h6 class="card-texts"><b>Color: </b>&nbsp;&nbsp;Red &nbsp;&nbsp; Black &nbsp;&nbsp; white </h5>
+          <h6 class="card-texts"><b>Size: </b>&nbsp;&nbsp;7 &nbsp;&nbsp; 8 &nbsp;&nbsp; 9 &nbsp;&nbsp; 10 &nbsp;&nbsp; 11 </h5>
 
-          <p class="card-text"><b>Descriptions:</b>Branded Shoes made by Puma</p>
+          <h6 class="card-texts"><b>Descriptions:</b>Branded Shoes made by Puma</h6>
 
           <a href="/addtocart/{{i.id}}"><button type="button" class="btn btn-danger" id="button">Add to Cart</button></a>
           <a href="/cart"><button type="button" class="btn btn-danger" id="button">View Carts</button></a>
