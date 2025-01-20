@@ -31,6 +31,9 @@
 
 .unique-style-4 img {
     max-width: 100%;
+    max-height: 200px; /* Limit the height */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 8px;
     object-fit: cover;
 }
@@ -48,7 +51,7 @@
 .unique-style-5 .card-title {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #ff0000;
+    color: #000000;
     text-transform: uppercase;
 }
 
@@ -56,7 +59,7 @@
 .unique-style-5 .card-text {
     margin-bottom: 10px;
     font-size: 1rem;
-    color: #ff0000;
+    color: #000000;
 }
 
 /* Buttons */

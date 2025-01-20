@@ -1,146 +1,70 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block header %}
-<link rel="stylesheet" href="{% static 'css/cart.css'%}">
+<link rel="stylesheet" href="{% static 'CSS/cart.css' %}">
 {% endblock header %}
-    
-
 
 {% block main %}
-<style>
-.h11{
-  text-align: center;
-  color:blueviolet
-}
-
-.p1{
-  color:black
-}
-
-.card-text{
-  color: black;
-}
-</style>
-
 <h1 class="h11">{{msg}}</h1>
-<div class="row mt-4">
-    <div class="col-md-9">
-        <div class="mt-5 p-3">
-          <h4>Login Time : {{request.user.date_joined}}</h4> <br>           
-          <h4>Login Time : {{time}}</h4> <br>           
-          <h4>Customer Details & Product Details</h4>
-          <p class="p1"><strong>Customer Name:</strong> {{request.user.username}}</p>
-          <p class="p1"><strong>Customer Email ID:</strong> {{request.user.email}}</p>
-          <p class="p1"><strong>Customer Mobile:</strong> {{request.user.id}} </p>
-        
-        </div>
-        
-        
-       
+<div class="row mt-4 unique-style-7">
+    <div class="col-md-9 unique-style-8">
+      <div class="mt-5 p-3 unique-style-9">
+        <h4>Login Time : {{request.user.date_joined}}</h4>
+        <br>
+        <h4>Customer Details & Product Details</h4>
+        <p class="p1"><strong>Customer Name:</strong> {{request.user.username}}</p>
+        <p class="p1"><strong>Customer Email ID:</strong> {{request.user.email}}</p>
+        <p class="p1"><strong>Customer Mobile:</strong> {{request.user.id}} </p>
+      </div>
     </div>
 
-     
-    <!-- Price Detail Section -->
-
-
     {% if items >= 1 %}
-      <div class="col-md-3 mt-5 " id="cart">
-      <!-- <div class="col-md-3 mt-5 shadow" id="cart">   // Only For Shadow Refrence-->
-       
+      <div class="col-md-3 mt-5 unique-style-10" id="cart">
         <h4>Price Details</h4>
         <hr>
-        <p><strong>Total items :</strong> {{items}} </p>
-        <p><strong>Total Amount :</strong> {{amount}} </p>
-        <p><strong>Saving Amount :</strong> {{saving}} </p>
-        <a href="/checkaddress" class="anchor"><button class="btn btn-success">Continue</button></a>
-        {% comment %} <a href="/order" class="anchor"><button class="btn btn-success">Place Order</button></a> {% endcomment %}
-
+        <p><strong>Total items:</strong> {{items}}</p>
+        <p><strong>Total Amount:</strong> ₹{{amount}}</p>
+        <p><strong>Saving Amount:</strong> ₹{{saving}}</p>
+        <a href="/checkaddress" class="anchor">
+            <button class="btn btn-success">Continue</button>
+        </a>
       </div>
+    {% endif %}
 
-      {% endif %}
+
 </div>
+  <div class="row mt-5" id="order-summary">
+    <h3>Order Summary</h3>
+  </div>
 
 
-<div class="row" id="rowred"><h3>Order Summary</h3></div>
+  <div class="row">
+    <div class="mt-3 p-3 unique-style-11">
+          <div class="row">
+            {% for c in cart %}
+            <div class="col-md-4 unique-style-12 product-box">
+                <img src="{{c.pid.image.url}}" class="card-img-top product-img" alt="{{c.pid.pname}}">
+            </div>
 
-
-<div class="row">
-    <div class="mt-3 p-3">
-        <div class="row">
-
-
-          
-          {% for c in cart %}
-            
-          
-            
-          <div class="col-md-4">
-            
-            <img src="{{c.pid.image.url}}" class="card-img-top" alt="...">                  
-          </div>
-
-          {% comment %} <div class="col-md-8">
-            <p><strong>Product Name:</strong> Bata Shoes</p>
-            <p><strong>Category:</strong> Shoes</p>
-            <p><strong>Price:</strong>1200</p>
-            <p><strong>Material:</strong> Synthetic</p>
-            <div class="input-group mb-3">
-              <button class="btn btn-outline-secondary" type="button">-</button>
-              <div class="col-xs-3">
-                  <input class="form-control" id="ex2" type="text">
+              <div class="col-md-8 card-body unique-style-13 product-info">
+                <h2>{{c.pid.pname}}</h2>
+                <p class="card-text"><strong>Category:</strong> 
+                    {% if c.pid.category == 1 %} Shoes {% elif c.pid.category == 2 %} Mobile {% elif c.pid.category == 3 %} Clothes {% elif c.pid.category == 4 %} Watch {% endif %}
+                </p>
+                <p class="card-text"><strong>Price:</strong> ₹<strong>{{c.pid.offer_price}}</strong> <del>₹{{i.price}}</del></p>
+                <p class="card-text"><strong>Description:</strong> {{c.pid.description}}</p>
+                <p class="card-text">
+                    <label for="qty">Quantity:</label>
+                    <a href="/updateqty/0/{{c.id}}/"><button class="btn btn-danger">-</button></a>
+                    <input type="number" value="{{c.qty}}" class="quantity-input">
+                    <a href="/updateqty/1/{{c.id}}/"><button class="btn btn-danger">+</button></a>
+                </p>
+                <a href="/product_details/{{c.pid.id}}/" class="btn btn-primary">See Details</a>
+                <a href="/deletecart/{{c.id}}/" class="btn btn-danger">Remove</a>
               </div>
-             <button class="btn btn-outline-secondary" type="button">+</button>
-
+            {% endfor %}
           </div>
-            <a href="" class="anchor"><button class="btn btn-danger">Remove</button></a>
-      
-          </div> {% endcomment %}
-
-
-
-          <div class="col-md-8 card-body">
-            <h1>{{c.pid.pname}} Details<h1><hr>
-            <h5 class="card-title">Name : {{c.pid.pname}}</h5>
-            
-          {% if c.pid.category == 1 %}
-              <p class="card-text">category : <strong>Shoes</strong></p>
-            
-          {% elif c.pid.category == 2%}
-            <p class="card-text">category : <strong>Mobile</strong></p>
-          
-          {% elif c.pid.category == 3%}
-            <p class="card-text">category : <strong>Clothes</strong></p>
-          
-            {% elif c.pid.category == 4%}
-            <p class="card-text">category : <strong>Watch</strong></p>
-
-            {% endif %}
-              
-            <p class="card-text">Price : <strong>{{c.pid.offer_price}}</strong>&nbsp;<del>{{i.price}}</del></p>
-            <p class="card-text">Description : {{c.pid.description}}</p>
-
-            <p class="card-text"><lable for="qty">Quantity : </lable>
-              <a href="/updateqty/0/{{c.id}}/"><button class="btn btn-danger">-</button></a>
-              <input type="number" value="{{c.qty}}">
-              <a href="/updateqty/1/{{c.id}}/"><button class="btn btn-danger">+</button></a>
-            </p><br><br>
-
-            {% comment %} <a href="/product_details.html" class="btn btn-primary">See Details</a> {% endcomment %}
-            <a href="/product_details/{{c.pid.id}}/" class="btn btn-primary">See Details</a>
-
-            <a href="/deletecart/{{c.id}}/" class="btn btn-primary">Remove</a>
-          </div>
-
-          {% endfor %}
-
-
-        </div>   
-      </div> 
+  </div>
 </div>
-    
 {% endblock main %}
-
-
-    
