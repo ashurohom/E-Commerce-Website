@@ -301,7 +301,6 @@ def makepayment(request):
         context['amount']=total_amt
         context['items']=items
 
-
         
     u=User.objects.filter(id=request.user.id)
     orders=Order.objects.filter(user_id=u[0])
@@ -330,7 +329,8 @@ def email_send(request):
         "ashitosh.rohom@gmail.com",
         ['ashitoshrohom1829@gmail.com'],
         )
-    return redirect('/order_history')
+    return redirect('/')
+    # return redirect('/order_history')
 
 
 

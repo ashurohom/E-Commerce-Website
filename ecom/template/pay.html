@@ -45,7 +45,8 @@ var options = {
     "order_id": "{{payment.id}}", // Replace with Razorpay Order ID
     "handler": function (response) {
         alert("Payment successful!");
-        window.location.href = "/payment_success/";
+        window.location.href = "/email_send/";
+        {% comment %} window.location.href = "/payment_success/"; {% endcomment %}
     },
     "prefill": {
         "name": "{{name}}",
