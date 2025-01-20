@@ -10,9 +10,9 @@
 <div class="row mt-4 unique-style-7">
     <div class="col-md-9 unique-style-8">
       <div class="mt-5 p-3 unique-style-9">
-        <h4>Login Time : {{request.user.date_joined}}</h4>
+        {% comment %} <h4>Login Time : {{request.user.date_joined}}</h4> {% endcomment %}
         <br>
-        <h4>Customer Details & Product Details</h4>
+        <h4>Customer Details & Product Details</h4><hr>
         <p class="p1"><strong>Customer Name:</strong> {{request.user.username}}</p>
         <p class="p1"><strong>Customer Email ID:</strong> {{request.user.email}}</p>
         <p class="p1"><strong>Customer Mobile:</strong> {{request.user.id}} </p>
@@ -36,7 +36,7 @@
 
 
 <div class="row mt-5" id="order-summary">
-    <h3>Order Summary</h3>
+    <h3><marquee>Dear {{request.user.username}} Order Summary </marquee></h3>
 </div>
 
 
