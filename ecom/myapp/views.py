@@ -8,6 +8,7 @@ import datetime
 import re
 import random
 import razorpay
+from django.core.mail import send_mail
 # Create your views here.
         
 # index page
