@@ -286,6 +286,23 @@ def fetchorder(request):
 
 def makepayment(request):
     context={}
+
+    cards=Card.objects.filter(userid=request.user.id)
+    saving_amt=0
+    total_amt=0
+    items=0
+
+    for cart in cards:
+        saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
+        total_amt += cart.pid.offer_price * cart.qty
+        items+=cart.qty
+
+        context['saving']=saving_amt
+        context['amount']=total_amt
+        context['items']=items
+
+
+        
     u=User.objects.filter(id=request.user.id)
     orders=Order.objects.filter(user_id=u[0])
     sum=0
