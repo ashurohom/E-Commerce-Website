@@ -1,29 +1,127 @@
-#card{
-    margin-top: 50px;
-    margin-left: 450px;
-    
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-img{
-    height: 450px;
-    width: 300px;
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-.card-body{
-    margin-left: 100px;
-    margin-top: 10px;
-    /* width: 400px; */
-}
-/* #button{
-    margin-top: 100px;
-} */
-
-
-#footer{
-    background-color: rgb(67, 255, 214);
-    margin-top: 75px;
+/* Card Container */
+.cards {
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 740px;
 }
 
-.li{
-    text-decoration: none;
+/* Row Styling */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Image Column */
+.unique-style-4 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+/* Text Column */
+.unique-style-5 {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Card Title */
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #d9534f; /* Bootstrap danger color */
+}
+
+/* Card Text */
+.card-text {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Buttons */
+#button {
+    background-color: #d9534f;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#button:hover {
+    background-color: #c9302c;
+}
+
+/* Alerts */
+.alert {
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .unique-style-4 img {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .unique-style-5 {
+        padding: 15px 10px;
+    }
+
+    #button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
 }

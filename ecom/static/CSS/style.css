@@ -20,7 +20,7 @@ body {
 }
 
 /* Column Styling */
-.col-md-3 {
+.col-md-2 {
     background-color: #f4f4f4;
     border-right: 1px solid #ddd;
     padding: 15px;
