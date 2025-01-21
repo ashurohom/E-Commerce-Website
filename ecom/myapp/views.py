@@ -262,11 +262,13 @@ def fetchorder(request):
     context={}
     u = User.objects.filter(id=request.user.id) # for current user\
     carts=Card.objects.filter(userid=request.user.id)
-    
     address = Address.objects.filter(userid = u[0])
+    q1=Q(userid=u[0])
+    q2=Q(payment_status="unpaid")   # for payment status
+    orders = Order.object.filter(q1&q2)
     context['address']=address
+    context['order']=orders
     
-
 
     cards=Card.objects.filter(userid=request.user.id)
     saving_amt=0
@@ -303,7 +305,11 @@ def makepayment(request):
 
         
     u=User.objects.filter(id=request.user.id)
-    orders=Order.objects.filter(user_id=u[0])
+    # orders=Order.objects.filter(user_id=u[0])
+    q1=Q(userid=u[0])
+    q2=Q(payment_status="unpaid")       # for payment status
+    orders = Order.object.filter(q1&q2)
+
     sum=0
 
     for order in orders:
@@ -332,6 +338,17 @@ def email_send(request):
     return redirect('/')
     # return redirect('/order_history')
 
+
+
+def order_status(request):
+    context={}
+    u=User.objects.filter(id=request.user.id)
+    q1=Q(userid=u[0])
+    q2=Q(payment_status="unpaid")       # for payment status
+    orders = Order.object.filter(q1&q2)
+
+    for order in orders:
+        
 
 
 # def order_history(request):
