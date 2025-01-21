@@ -280,7 +280,7 @@ def fetchorder(request):
         saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
         total_amt += cart.pid.offer_price * cart.qty
         items+=cart.qty
-        amount = saving_amt + total_amt
+        amount = total_amt - saving_amt
 
     # for i in orders:
     #     total_amt+=i.amt
