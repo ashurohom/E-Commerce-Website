@@ -18,9 +18,9 @@
         <div class="col-md-12 payment-section">
             <h2>Payment Details</h2>
             <p><strong>Items:</strong> {{items}}</p>
-            <p><strong>Total Amount:</strong> ₹{{finalamount}}</p>
+            <p><strong>Total Amount:</strong> ₹{{amount}}</p>
             <p><strong>Savings:</strong> ₹{{saving}}</p>
-            <p><strong>Final Amount:</strong><b> ₹{{amount}} </b></p>            
+            <p><strong>Final Amount:</strong><b> ₹{{finalamount}} </b></p>            
             <hr>
 
             
@@ -37,14 +37,15 @@
 <script>
 var options = {
     "key": "rzp_test_2zJjEbeRT0fAQQ", // Replace with your Razorpay Key ID
-    "amount": "{{final_amount}}", // Amount in smallest currency unit (paise)
+    {% comment %} "amount": "{{final_amount}}", // Amount in smallest currency unit (paise) {% endcomment %}
+    "amount": "{{finalamount}}", // Amount in smallest currency unit (paise)
     "currency": "INR",
     "name": "MyBuddy",
     "description": "Secure Payment",
     "image": "https://example.com/your_logo",
     "order_id": "{{payment.id}}", // Replace with Razorpay Order ID
     "handler": function (response) {
-        alert("Payment successful!");
+        {% comment %} alert("Payment successful!"); {% endcomment %}
         window.location.href = "/email_send/";
         {% comment %} window.location.href = "/payment_success/"; {% endcomment %}
     },

@@ -306,7 +306,7 @@ def makepayment(request):
         saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
         total_amt += cart.pid.offer_price * cart.qty
         items+=cart.qty
-        amount = saving_amt + total_amt
+        amount = total_amt - saving_amt 
 
         context['saving']=saving_amt
         context['finalamount']=amount
@@ -345,8 +345,8 @@ def email_send(request):
         "ashitosh.rohom@gmail.com",
         ['ashitoshrohom1829@gmail.com'],
         )
-    return redirect('/myorder')
-    # return redirect('/update_order_status')
+    # return redirect('/myorder')
+    return redirect('/update_order_status')
 
 
 
