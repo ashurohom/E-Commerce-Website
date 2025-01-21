@@ -263,9 +263,9 @@ def fetchorder(request):
     u = User.objects.filter(id=request.user.id) # for current user\
     carts=Card.objects.filter(userid=request.user.id)
     address = Address.objects.filter(userid = u[0])
-    q1=Q(userid=u[0])
+    q1=Q(user_id=u[0])
     q2=Q(payment_status="unpaid")   # for payment status
-    orders = Order.object.filter(q1&q2)
+    orders = Order.objects.filter(q1&q2)
     context['address']=address
     context['order']=orders
     
@@ -275,10 +275,14 @@ def fetchorder(request):
     total_amt=0
     items=0
 
-    for cart in cards:
-        saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
-        total_amt += cart.pid.offer_price * cart.qty
-        items+=cart.qty
+    # for cart in cards:
+    #     saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
+    #     total_amt += cart.pid.offer_price * cart.qty
+    #     items+=cart.qty
+
+    for i in orders:
+        total_amt+=i.amt
+        items+=i.qty
 
         context['saving']=saving_amt
         context['amount']=total_amt
@@ -306,9 +310,9 @@ def makepayment(request):
         
     u=User.objects.filter(id=request.user.id)
     # orders=Order.objects.filter(user_id=u[0])
-    q1=Q(userid=u[0])
+    q1=Q(user_id=u[0])
     q2=Q(payment_status="unpaid")       # for payment status
-    orders = Order.object.filter(q1&q2)
+    orders = Order.objects.filter(q1&q2)
 
     sum=0
 
@@ -335,20 +339,22 @@ def email_send(request):
         "ashitosh.rohom@gmail.com",
         ['ashitoshrohom1829@gmail.com'],
         )
-    return redirect('/')
-    # return redirect('/order_history')
+    # return redirect('/')
+    return redirect('/update_order_status')
 
 
 
-def order_status(request):
+def update_order_status(request):
     context={}
     u=User.objects.filter(id=request.user.id)
-    q1=Q(userid=u[0])
+    q1=Q(user_id=u[0])
     q2=Q(payment_status="unpaid")       # for payment status
-    orders = Order.object.filter(q1&q2)
+    orders = Order.objects.filter(q1&q2)
+    orders.update(payment_status="Paid")
 
-    for order in orders:
-        
+    # return HttpResponse("Order Status Changed")
+    return redirect('/')
+
 
 
 # def order_history(request):
