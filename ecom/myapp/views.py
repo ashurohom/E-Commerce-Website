@@ -372,4 +372,7 @@ def update_order_status(request):
 #     return HttpResponse("Your History Created !")
 
 def myorder(request):
-    return render(request,'myorder.html')
+    context={}
+    data = Order.objects.filter(user_id=request.user.id)
+    context['order']=data
+    return render(request,'myorder.html',context)
