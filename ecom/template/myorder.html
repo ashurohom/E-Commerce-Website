@@ -20,24 +20,17 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Add rows dynamically using backend data -->
+            {% for i in order %}
             <tr>
-                <td>12345</td>
-                <td>U001</td>
-                <td>P001</td>
-                <td>2</td>
-                <td>$50</td>
-                <td>Paid</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
-            <tr>
-                <td>12346</td>
-                <td>U002</td>
-                <td>P002</td>
-                <td>1</td>
-                <td>$30</td>
-                <td>Pending</td>
-            </tr>
-            <!-- Repeat for other orders -->
+            {% endfor %}
+
         </tbody>
     </table>
 </div>
