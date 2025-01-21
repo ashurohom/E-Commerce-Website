@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.db.models import Q
 from django.contrib.auth.models import User     # for default table
 from django.contrib.auth import authenticate,login,logout
-from .models import Product,Card,Address,Order,History
+from .models import Product,Card,Address,Order#,History
 import datetime
 import re
 import random
@@ -334,16 +334,16 @@ def email_send(request):
 
 
 
-def order_history(request):
-    user=User.objects.filter(id=request.user.id)
-    orders=Order.objects.filter(user_id=user[0])
-    addr=Address.objects.filter(userid=user[0])
-    a=""
-    for x in addr:
-        a+=x.fullname + "" + x.address + "" + x.city + "" + x.state + "" + x.pincode
+# def order_history(request):
+#     user=User.objects.filter(id=request.user.id)
+#     orders=Order.objects.filter(user_id=user[0])
+#     addr=Address.objects.filter(userid=user[0])
+#     a=""
+#     for x in addr:
+#         a+=x.fullname + "" + x.address + "" + x.city + "" + x.state + "" + x.pincode
 
-    for i in orders:
-        myorder=History.objects.create(order_id=orders[0], userid=user[0], amount=i.amt, address=a, status="Delivered")
-        myorder.save()
-    # return redirect('/')
-    return HttpResponse("Your History Created !")
+#     for i in orders:
+#         myorder=History.objects.create(order_id=orders[0], userid=user[0], amount=i.amt, address=a, status="Delivered")
+#         myorder.save()
+#     # return redirect('/')
+#     return HttpResponse("Your History Created !")

@@ -26,7 +26,7 @@ class Order(models.Model):
     p_id=models.ForeignKey("Product",on_delete=models.CASCADE,db_column="p_id")
     qty=models.IntegerField(default=1)
     amt=models.FloatField()
-    payment_status=models.CharField(max_length=20)
+    payment_status=models.CharField(max_length=20,default='unpaid')
 
     def __str__(self):
         return self.order_id # it return the only char value to the admin interface and user inetrface
@@ -41,12 +41,12 @@ class Address(models.Model):
     state = models.CharField(max_length=30)    
     mobile = models.CharField(max_length=10)    
 
-class History(models.Model):
-    order_id = models.ForeignKey('Order',on_delete=models.CASCADE, db_column="order_id")
-    userid = models.ForeignKey("auth.User",on_delete=models.CASCADE, db_column="userid")
-    amount=models.FloatField()
-    address = models.CharField(max_length=300)
-    status = models.CharField(max_length=30)
+# class History(models.Model):
+#     order_id = models.ForeignKey('Order',on_delete=models.CASCADE, db_column="order_id")
+#     userid = models.ForeignKey("auth.User",on_delete=models.CASCADE, db_column="userid")
+#     amount=models.FloatField()
+#     address = models.CharField(max_length=300)
+#     status = models.CharField(max_length=30)
     
 
     
