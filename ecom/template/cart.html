@@ -56,10 +56,15 @@
                 <p class="card-text"><strong>Price:</strong> ₹<strong>{{c.pid.offer_price}}</strong> <del>₹{{i.price}}</del></p>
                 <p class="card-text"><strong>Description:</strong> {{c.pid.description}}</p>
                 <p class="card-text">
+
                     <label for="qty">Quantity:</label>
                     <a href="/updateqty/0/{{c.id}}/"><button class="btn btn-danger">-</button></a>
+                    
                     <input type="number" value="{{c.qty}}" class="quantity-input">
+                    
                     <a href="/updateqty/1/{{c.id}}/"><button class="btn btn-danger">+</button></a>
+
+
                 </p>
                 <a href="/product_details/{{c.pid.id}}/" class="btn btn-primary">See Details</a>
                 <a href="/deletecart/{{c.id}}/" class="btn btn-danger">Remove</a>

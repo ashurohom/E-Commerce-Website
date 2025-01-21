@@ -370,3 +370,6 @@ def update_order_status(request):
 #         myorder.save()
 #     # return redirect('/')
 #     return HttpResponse("Your History Created !")
+
+def myorder(request):
+    return render(request,'myorder.html')

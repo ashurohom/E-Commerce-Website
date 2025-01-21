@@ -8,7 +8,7 @@ body {
 
 .navbar {
     /* background-color: #2d3436; */
-    background-color: #000000;
+    background-color: #ff0000;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
@@ -17,10 +17,13 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: uppercase;
+    margin-left: 10px;
+    padding-left: 20px;
 }
 
 .navbar-brand:hover {
-    color: #00cec9;
+    color: #000000;
+    border-radius: 7px;
 }
 
 .navbar-nav .nav-link {
@@ -34,7 +37,7 @@ body {
 .navbar-nav .nav-link:hover {
     color: #ffffff;
     background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 15px;
 }
 
 .navbar-toggler {
@@ -59,7 +62,8 @@ body {
     background-color: #0984e3;
     border: none;
     padding: 0.5rem 1.5rem;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
+    border-radius: 1.5rem;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
