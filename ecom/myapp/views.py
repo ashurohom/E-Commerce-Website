@@ -275,15 +275,15 @@ def fetchorder(request):
     total_amt=0
     items=0
 
-    # for cart in cards:
-    #     saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
-    #     total_amt += cart.pid.offer_price * cart.qty
-    #     items+=cart.qty
+    for cart in cards:
+        saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
+        total_amt += cart.pid.offer_price * cart.qty
+        items+=cart.qty
 
-    for i in orders:
-        total_amt+=i.amt
-        items+=i.qty
-        saving_amt += (i.pid.price - i.pid.offer_price) * i.qty
+    # for i in orders:
+    #     total_amt+=i.amt
+    #     items+=i.qty
+    #     saving_amt += (i.price - i.offer_price) * i.qty
 
         context['saving']=saving_amt
         context['amount']=total_amt
@@ -303,8 +303,10 @@ def makepayment(request):
         saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
         total_amt += cart.pid.offer_price * cart.qty
         items+=cart.qty
+        amount = saving_amt + total_amt
 
         context['saving']=saving_amt
+        context['finalamount']=amount
         context['amount']=total_amt
         context['items']=items
 
