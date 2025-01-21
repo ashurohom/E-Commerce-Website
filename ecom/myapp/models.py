@@ -26,6 +26,7 @@ class Order(models.Model):
     p_id=models.ForeignKey("Product",on_delete=models.CASCADE,db_column="p_id")
     qty=models.IntegerField(default=1)
     amt=models.FloatField()
+    payment_status=models.CharField(max_length=20)
 
     def __str__(self):
         return self.order_id # it return the only char value to the admin interface and user inetrface
