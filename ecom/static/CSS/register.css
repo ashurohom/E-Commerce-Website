@@ -1,9 +1,9 @@
-.col-md-4{
+/* .col-md-4{
     border: 1px solid lightblue;
-    box-shadow: 2px 2px 1px 1px aqua;
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
     padding: 20px;
-    background-color: azure;  
-    border-radius: 20px;  
+    background-color: rgb(255, 255, 255);  
+    border-radius: 10px;  
 }
 
 #btn{
@@ -12,4 +12,105 @@
 
 a{
     text-decoration: none;
+} */
+
+
+.col-md-4 {
+    border: 1px solid lightblue;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a cleaner look */
+    padding: 15px; /* Reduced padding to decrease height */
+    background-color: #fff; /* Pure white background for better readability */
+    border-radius: 10px;  
+    width: 100%; /* Keep the width consistent */
+    max-width: 400px; /* Set a maximum width */
+    margin: 0 auto; /* Center the form horizontally */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Add hover effect to the form container */
+.col-md-4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjust button styles */
+#btn {
+    margin-left: auto; /* Aligns button properly */
+    margin-right: auto; 
+    display: block; /* Centers the button */
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Reduced padding for smaller height */
+    font-size: 0.9rem; /* Slightly smaller text size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#btn:hover {
+    background-color: #c82333; /* Darker shade for hover effect */
+}
+
+/* Adjust input field styles */
+input {
+    border: 1px solid #ced4da; /* Light gray border for inputs */
+    border-radius: 5px;
+    padding: 8px; /* Reduced padding to decrease input height */
+    width: 100%;
+    font-size: 0.9rem; /* Slightly smaller font size */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #80bdff; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+/* Adjust label styles */
+label {
+    font-weight: bold;
+    color: #333; /* Darker color for readability */
+    margin-bottom: 3px; /* Reduced margin for less spacing */
+    display: inline-block;
+    font-size: 0.85rem; /* Slightly smaller font size */
+}
+
+/* Reduce heading size and spacing */
+h4 {
+    font-size: 1.25rem; /* Reduced heading size */
+    margin-bottom: 10px; /* Less spacing below heading */
+    text-align: center;
+}
+
+/* Adjust spacing between input fields */
+.mb-3 {
+    margin-bottom: 10px; /* Reduce spacing between input fields */
+}
+
+/* Style for alert message */
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 8px; /* Reduced padding for smaller height */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Reduced margin for less spacing */
+    font-size: 0.85rem;
+    text-align: center;
+    border: 1px solid #f5c6cb;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Bootstrap primary link color */
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-top: 5px; /* Reduced spacing above link */
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #0056b3; /* Darker shade on hover */
 }

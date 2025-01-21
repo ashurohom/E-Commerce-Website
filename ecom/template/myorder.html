@@ -12,8 +12,8 @@
         <thead>
             <tr>
                 <th>Order ID</th>
-                <th>User ID</th>
-                <th>Product ID</th>
+                <th>User</th>
+                <th>Product</th>
                 <th>Quantity</th>
                 <th>Amount</th>
                 <th>Payment Status</th>
@@ -22,12 +22,12 @@
         <tbody>
             {% for i in order %}
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{i.order_id}}</td>
+                <td>{{i.user_id}}</td>
+                <td>{{i.p_id}}</td>
+                <td>{{i.qty}}</td>
+                <td>{{i.amt}}</td>
+                <td>{{i.payment_status}}</td>
             </tr>
             {% endfor %}
 
