@@ -2,54 +2,39 @@
 {% load static %}
 
 {% block header %}
-    <link rel="stylesheet" href="{% static 'CSS/ulogin.css'%}">
+<link rel="stylesheet" href="{% static 'CSS/ulogin.css'%}">
 {% endblock header %}
 
 {% block main %}
 
-<div class="row">
-            
-    <form method="post" >
+<div class="row justify-content-center align-items-center vh-100">
+    <form method="POST" class="login-form">
         {% csrf_token %}
-        <div class="col-md-4 mx-auto mt-5">
-           <h4>Login Here</h4><br>
-           
-           {% if error_msg %}
-            <div class="alert alert-danger" >
-                {{error_msg}}
+        <div class="form-container">
+            <h4>Login Here</h4>
+
+            {% if error_msg %}
+            <div class="alert alert-danger">
+                {{ error_msg }}
             </div>
             {% endif %}
 
+            <div class="form-group">
+                <label for="uname">User Name</label>
+                <input type="text" id="uname" name="uname" placeholder="Username" required>
+            </div>
 
-            <label for="exampleFormControlInput1" class="form-label">User Name</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username" name="uname"><br>
-        
-        
-        
-            {% comment %} <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name="email"><br>
-         {% endcomment %}
+            <div class="form-group">
+                <label for="upass">Password</label>
+                <input type="password" id="upass" name="upass" placeholder="Enter Password" required>
+            </div>
 
-        
-            <label for="exampleFormControlInput1" class="form-label">Email Password</label>
-            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" name="upass"><br>
-        
-
-        
-            {% comment %} <label for="exampleFormControlInput1" class="form-label">ReEnter Password</label>
-            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" name="repass"><br>
-         {% endcomment %}
-            
-            <button type="submit" class="btn btn-primary" id="btn">Login</button>&nbsp;&nbsp;&nbsp;
-            <a href="/register">Register Here</a>
-
+            <button type="submit" id="btn">Login</button>
+            <p class="new-user">
+                New user? <a href="/register">Register here</a>
+            </p>
         </div>
-        
-
     </form>
 </div>
-<div>
-    <p></p>
-</div>
 
-{% endblock main%}
+{% endblock main %}

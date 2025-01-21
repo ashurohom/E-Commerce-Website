@@ -283,6 +283,7 @@ def fetchorder(request):
     for i in orders:
         total_amt+=i.amt
         items+=i.qty
+        saving_amt += (i.pid.price - i.pid.offer_price) * i.qty
 
         context['saving']=saving_amt
         context['amount']=total_amt

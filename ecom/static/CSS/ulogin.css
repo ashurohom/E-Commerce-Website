@@ -1,9 +1,93 @@
-/* UserLogin Page 'ulogin.html'  */
+body {
+    background: linear-gradient(135deg, #6c757d, #007bff);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
 
-.col-md-4{
-    border: 1px solid lightblue;
-    box-shadow: 2px 2px 1px 1px aqua;
+.login-form {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    background-color: rgb(255, 255, 255);  
-    border-radius: 20px;  
+    margin: 0 auto;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+h4 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+button#btn {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button#btn:hover {
+    background: #0056b3;
+}
+
+.new-user {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.new-user a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.new-user a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    text-align: center;
+    font-size: 0.9rem;
+    background: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
 }
