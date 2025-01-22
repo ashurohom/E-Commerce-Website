@@ -280,7 +280,7 @@ def fetchorder(request):
         saving_amt += (cart.pid.price - cart.pid.offer_price) * cart.qty
         total_amt += cart.pid.offer_price * cart.qty
         items+=cart.qty
-        amount = total_amt - saving_amt
+        # amount = total_amt - saving_amt
 
     # for i in orders:
     #     total_amt+=i.amt
@@ -290,7 +290,7 @@ def fetchorder(request):
         context['saving']=saving_amt
         context['amount']=total_amt
         context['items']=items
-        context['finalamount']=amount
+        # context['finalamount']=amount
         
     return render(request,'placeorder.html',context)
 
