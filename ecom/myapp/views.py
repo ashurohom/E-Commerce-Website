@@ -341,7 +341,7 @@ def makepayment(request):
 def email_send(request):
     send_mail(
         "EasyMart Order Confirmation",
-        "Your Order Is Confirm \n Thank You",
+        "Dear Customer Your Order Is Confirm \n Thank You",
         "ashitosh.rohom@gmail.com",
         ['ashitoshrohom1829@gmail.com'],
         )
