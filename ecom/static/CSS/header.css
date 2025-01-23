@@ -7,9 +7,9 @@ body {
 }
 
 .navbar {
-    /* background-color: #2d3436; */
-    background-color: #000000;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    background-color: #2d3436;
+    /* background-color: #000000; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -27,7 +27,7 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: #000000;
+    color: #ffffff;
     font-size: 1rem;
     padding: 0.5rem 1rem;
     text-transform: capitalize;
