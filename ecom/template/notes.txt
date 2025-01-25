@@ -2,3 +2,4 @@ Notes :
 
 Create a Folder for project
 
+1. Install Environment [ pip Install venv ] 
