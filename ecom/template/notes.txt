@@ -8,3 +8,4 @@ Create a Folder for project
 4. install django [ pip install django ]
 5. Create a project [ django-admin startproject project_name ]
 6. Run Project : Change Current Directory [cd project_name] [python manage.py runserver]
+7. Create App : python manage.py startapp app_name
