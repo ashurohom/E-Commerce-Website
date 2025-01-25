@@ -6,3 +6,5 @@ Create a Folder for project
 2. Create venv [ venv venv_name]
 3. Activate venv [ env_name\scripts\activate ]
 4. install django [ pip install django ]
+5. Create a project [ django-admin startproject project_name ]
+6. Run Project : Change Current Directory [cd project_name] [python manage.py runserver]
