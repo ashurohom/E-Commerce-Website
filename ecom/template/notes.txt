@@ -9,3 +9,4 @@ Create a Folder for project
 5. Create a project [ django-admin startproject project_name ]
 6. Run Project : Change Current Directory [cd project_name] [python manage.py runserver]
 7. Create App : python manage.py startapp app_name
+8. Create a New View in Views.py
