@@ -20,3 +20,4 @@ python3 -m venv django_venv		//create virtual Environment
 source ./django_venv/bin/active 	//activate virtual Environment
 pip3 install django			//install django
 django-admin startproject firstDjangoProject //create project
+$cd firstDjangoProject			//to start server
