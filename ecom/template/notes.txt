@@ -17,3 +17,5 @@ Create a Folder for project
 python manage.py runserver 8000
 python manage.py runserver 8001
 python3 -m venv django_venv		//create virtual Environment 
+source ./django_venv/bin/active 	//activate virtual Environment
+pip3 install django			//install django
