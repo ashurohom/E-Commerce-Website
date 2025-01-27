@@ -45,8 +45,8 @@ var options = {
     "image": "https://example.com/your_logo",
     "order_id": "{{payment.id}}", // Replace with Razorpay Order ID
     "handler": function (response) {
-        {% comment %} alert("Payment successful!"); {% endcomment %}
-        window.location.href = "/email_send/";
+        alert("Payment successful!");
+        {% comment %} window.location.href = "/email_send/"; {% endcomment %}
         {% comment %} window.location.href = "/payment_success/"; {% endcomment %}
     },
     "prefill": {
@@ -55,7 +55,7 @@ var options = {
         "contact": "{{contact}}"
     },
     "notes": {
-        "address": "E-commerce Website"
+        "address": "MyBuddy"
     },
     "theme": {
         "color": "#3399cc"
