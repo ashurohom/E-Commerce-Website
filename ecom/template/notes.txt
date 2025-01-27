@@ -15,4 +15,5 @@ Create a Folder for project
 11. Change Django Default Port
 12. Default django Port : 8000
 python manage.py runserver 8000
-	python manage.py runserver 8001
+python manage.py runserver 8001
+python3 -m venv django_venv		//create virtual Environment 
