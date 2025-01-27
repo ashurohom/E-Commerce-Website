@@ -14,3 +14,5 @@ Create a Folder for project
 10. create a templte and static Folder
 11. Change Django Default Port
 12. Default django Port : 8000
+python manage.py runserver 8000
+	python manage.py runserver 8001
