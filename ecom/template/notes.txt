@@ -13,3 +13,4 @@ Create a Folder for project
 9. Then add a url in the urls.py
 10. create a templte and static Folder
 11. Change Django Default Port
+12. Default django Port : 8000
