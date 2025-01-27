@@ -23,3 +23,4 @@ django-admin startproject firstDjangoProject //create project
 $cd firstDjangoProject			//to start server
 python3 manage.py runserver
 3. Again Run Project
+	venv_name\scripts\activate
