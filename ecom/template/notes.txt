@@ -49,3 +49,6 @@ python3 manage.py runserver
 	Import : from django.http import HttpResponce
     then:
 	create function using Request and HttpResponce
+
+    	Ex : def show(request)
+		   return HttpResponce("<h1>Hello Ashitosh</h1>")
