@@ -31,3 +31,6 @@ python3 manage.py runserver
 
  	python manage.py startapp app_name
 	python manage.py startapp myapp
+
+	127.0.0.1.8000
+	127.0.0.1 [Localhost]	.8000 [Port]	
