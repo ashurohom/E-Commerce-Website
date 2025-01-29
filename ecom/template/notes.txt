@@ -27,3 +27,7 @@ python3 manage.py runserver
     cd project_name
     python manage.py runserver
     
+ Create New App Inside The Project    
+
+ 	python manage.py startapp app_name
+	python manage.py startapp myapp
