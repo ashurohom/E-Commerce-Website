@@ -57,3 +57,5 @@ python3 manage.py runserver
 		  After Creating Function 		   
 
 import : from django.urls import path
+ from myapp import views
+		   [import views file from the newly cereated app name 'myapp']
