@@ -56,3 +56,4 @@ python3 manage.py runserver
 	Open : urls.py
 		  After Creating Function 		   
 
+import : from django.urls import path
