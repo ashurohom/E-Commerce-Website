@@ -52,3 +52,7 @@ python3 manage.py runserver
 
     	Ex : def show(request)
 		   return HttpResponce("<h1>Hello Ashitosh</h1>")
+
+	Open : urls.py
+		  After Creating Function 		   
+
