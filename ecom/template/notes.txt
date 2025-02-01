@@ -61,5 +61,7 @@ import : from django.urls import path
 		   [import views file from the newly cereated app name 'myapp']
 		   Add Path : path('path_name/',file_name.function_name)
 		   path('show/',views.show),
-		   
+
 		   Save File And Open Link
+		   Add the path
+		i.e : http://127.0.0.1:8000/show/
