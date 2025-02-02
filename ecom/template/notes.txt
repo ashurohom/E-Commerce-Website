@@ -71,3 +71,6 @@ import : from django.urls import path
 
 
 	* For Multiple Parameter In Function
+	viwes.py
+		def details(request,name):
+    		return HttpResponse(name)
