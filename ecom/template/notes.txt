@@ -74,3 +74,6 @@ import : from django.urls import path
 	viwes.py
 		def details(request,name):
     		return HttpResponse(name)
+
+			urls.py
+		path('details/<name>',views.details),	
