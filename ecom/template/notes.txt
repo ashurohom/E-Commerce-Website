@@ -77,3 +77,4 @@ import : from django.urls import path
 
 			urls.py
 		path('details/<name>',views.details),	
+				http://127.0.0.1:8000/details/Ashitosh
