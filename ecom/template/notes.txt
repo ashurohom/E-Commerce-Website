@@ -65,3 +65,9 @@ import : from django.urls import path
 		   Save File And Open Link
 		   Add the path
 		i.e : http://127.0.0.1:8000/show/
+
+
+=========================================================================================================================================================================
+
+
+	* For Multiple Parameter In Function
