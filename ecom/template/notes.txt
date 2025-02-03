@@ -84,3 +84,6 @@ import : from django.urls import path
 		views.py
 		def details(request,name,rollno):
     			return HttpResponse("Name : "+name + "RollNO : "+rollno)
+
+				urls.py
+    		path('details/<name>/<rollno>/',views.details),
