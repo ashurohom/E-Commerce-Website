@@ -107,3 +107,4 @@ import : from django.urls import path
 	open urls.py 
 	- import : from myapp import views
 		- add path : path('pathname/',viwes.html_file_name)
+				   : path('home/',views.home)
