@@ -108,3 +108,7 @@ import : from django.urls import path
 	- import : from myapp import views
 		- add path : path('pathname/',viwes.html_file_name)
 				   : path('home/',views.home)
+
+	open views.py
+
+	# add html file in function				   
