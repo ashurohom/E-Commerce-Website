@@ -105,3 +105,4 @@ import : from django.urls import path
 	- in template folder create html files.
 
 	open urls.py 
+	- import : from myapp import views
