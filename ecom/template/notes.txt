@@ -99,3 +99,4 @@ import : from django.urls import path
 6. Adding HTML and CSS Folders 
 
 	MVT Architecture
+	user -> url -> view -> model -> template
