@@ -117,3 +117,4 @@ import : from django.urls import path
 		def home(request):
     		return render(request,'home.html')
 2) CSS
+	- create folder with name 'static' in the main project
