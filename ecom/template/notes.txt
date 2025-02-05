@@ -128,3 +128,7 @@ import : from django.urls import path
 =========================================================================================================================================================================
 # make changes in settings.py file
 	add created app in INSTALLED_APPS = ['app_name',]
+		Above template import os
+
+	in template add template folder path 
+	 ['DIRS': [os.path.join(BASE_DIR,'template')],]
