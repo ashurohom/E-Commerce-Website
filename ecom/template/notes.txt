@@ -137,3 +137,4 @@ import : from django.urls import path
 	[STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]]
 =========================================================================================================================================================================
 # Dictionary
+	Create and display dictionary in the template views.py
