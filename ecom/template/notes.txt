@@ -114,3 +114,5 @@ import : from django.urls import path
 	# add html file in function		
 	from django.shortcuts import render
 	from django.http import HttpResponse			   
+		def home(request):
+    		return render(request,'home.html')
