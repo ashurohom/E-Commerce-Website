@@ -132,3 +132,6 @@ import : from django.urls import path
 
 	in template add template folder path 
 	 ['DIRS': [os.path.join(BASE_DIR,'template')],]
+
+	 	in STATIC_URLS add path : 
+	[STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]]
