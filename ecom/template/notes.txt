@@ -122,3 +122,5 @@ import : from django.urls import path
 	- in css folder create css file
 		connect css file with html file
 		<!DOCTYPE html>
+			{%load static%}
+	<html lang="en">
