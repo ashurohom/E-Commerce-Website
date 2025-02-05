@@ -121,3 +121,4 @@ import : from django.urls import path
 	- in static folder create css,js,images folder
 	- in css folder create css file
 		connect css file with html file
+		<!DOCTYPE html>
