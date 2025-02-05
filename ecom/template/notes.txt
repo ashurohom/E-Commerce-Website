@@ -124,3 +124,4 @@ import : from django.urls import path
 		<!DOCTYPE html>
 			{%load static%}
 	<html lang="en">
+		<link rel="stylesheet" href="{%static 'css/style.css'%}">
