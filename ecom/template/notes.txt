@@ -111,4 +111,6 @@ import : from django.urls import path
 
 	open views.py
 
-	# add html file in function				   
+	# add html file in function		
+	from django.shortcuts import render
+	from django.http import HttpResponse			   
