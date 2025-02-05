@@ -100,7 +100,7 @@ import : from django.urls import path
 
 	MVT Architecture
 	user -> url -> view -> model -> template
-		1) HTML
+1) HTML
 	- create folder with name 'template' in the main project
 	- in template folder create html files.
 
@@ -116,3 +116,4 @@ import : from django.urls import path
 	from django.http import HttpResponse			   
 		def home(request):
     		return render(request,'home.html')
+2) CSS
