@@ -126,4 +126,4 @@ import : from django.urls import path
 	<html lang="en">
 		<link rel="stylesheet" href="{%static 'css/style.css'%}">
 =========================================================================================================================================================================
-
+# make changes in settings.py file
