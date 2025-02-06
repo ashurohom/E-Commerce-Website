@@ -140,3 +140,6 @@ import : from django.urls import path
 	Create and display dictionary in the template views.py
 	1) IN Function add a empty dictionary
 	2) pass the dictionary in the return
+		EX :
+
+	from django.shortcuts import render
