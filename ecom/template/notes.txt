@@ -145,3 +145,7 @@ import : from django.urls import path
 	from django.shortcuts import render
 		from django.http import HttpResponse
 	# Create your views here.
+		def hello(request):
+	    a=10
+	    b=20	
+	    c=a+b
