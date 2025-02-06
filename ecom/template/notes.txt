@@ -143,3 +143,5 @@ import : from django.urls import path
 		EX :
 
 	from django.shortcuts import render
+		from django.http import HttpResponse
+	# Create your views here.
