@@ -162,6 +162,20 @@ import : from django.urls import path
 		{% for i in sequence %}
 		{{i}}
 		{% endfor %}
-		
+
 	- for forloop first we have to define a dictionary in views.py	
 	- also assign a value in dictionary in key value pair
+
+		 
+	<h4>For Loop</h4><br>
+    
+    	<h4>a = {{a}}</h4>
+    	<h4>b = {{b}}</h4>
+    	<h4>c  = {{c}}</h4>
+    	{% for i in a %}
+    
+    	{% if i|divisibleby:2 %}
+    	{{i}} <br>   
+    	{% endif %}
+        
+    	{% endfor %}
