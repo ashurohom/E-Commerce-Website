@@ -162,3 +162,6 @@ import : from django.urls import path
 		{% for i in sequence %}
 		{{i}}
 		{% endfor %}
+		
+	- for forloop first we have to define a dictionary in views.py	
+	- also assign a value in dictionary in key value pair
