@@ -192,3 +192,6 @@ import : from django.urls import path
 		 - value i.e b,c are mention in the dictionary on views.py file
 		 	 {% if b > c %}
 	    <h3>{{b}} is Grater than {{c}}</h3>
+			    {% else %}
+	    <h3>{{c}} is Grater than {{b}}</h3>
+	{% endif %}
