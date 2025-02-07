@@ -188,3 +188,5 @@ import : from django.urls import path
 	{% elif condition %}
 	{% else %}
 	{% endif %}
+
+		 - value i.e b,c are mention in the dictionary on views.py file
