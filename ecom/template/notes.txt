@@ -153,4 +153,4 @@ import : from django.urls import path
 	    context['a']=a
 	    context['b']=b
 	    context['c']=c
-		
+			return render(request,'home.html',context)
