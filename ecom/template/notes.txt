@@ -179,3 +179,5 @@ import : from django.urls import path
     	{% endif %}
         
     	{% endfor %}
+
+	* If Else In Django
