@@ -181,3 +181,10 @@ import : from django.urls import path
     	{% endfor %}
 
 	* If Else In Django
+	Syntax : 
+
+	{% if condition %}
+	{{ if code }}
+	{% elif condition %}
+	{% else %}
+	{% endif %}
