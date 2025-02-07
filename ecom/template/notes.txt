@@ -149,3 +149,8 @@ import : from django.urls import path
 	    a=10
 	    b=20	
 	    c=a+b
+		context = {}
+	    context['a']=a
+	    context['b']=b
+	    context['c']=c
+		
