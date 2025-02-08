@@ -198,3 +198,7 @@ import : from django.urls import path
 
 	=========================================================================================================================================================================
 # Python And SQL Connections
+	# Mysql connection using python
+	# modules:
+	# 1.mysql connector
+	# 2.pymysql
