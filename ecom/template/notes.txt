@@ -204,3 +204,6 @@ import : from django.urls import path
 	# 2.pymysql
 		# step 1):install pymysql
 	'''command:- pip install pymysql'''
+
+		# Step 2):Create Connection
+	# Syntax:
