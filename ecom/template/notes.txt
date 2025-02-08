@@ -207,3 +207,8 @@ import : from django.urls import path
 
 		# Step 2):Create Connection
 	# Syntax:
+		'''connection=pymysql.connect(
+	    host="localhost",
+	    user="your user name",
+	    password="your password",
+	    database="Your Database")'''
