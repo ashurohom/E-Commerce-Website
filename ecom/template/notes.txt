@@ -231,4 +231,4 @@ import : from django.urls import path
 		print("Inserted values succefully !!!")		
 
 	# to fetch the data of table
-			
+	cursor.execute("select * from student1")			
