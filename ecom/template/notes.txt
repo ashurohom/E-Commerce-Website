@@ -212,3 +212,6 @@ import : from django.urls import path
 	    user="your user name",
 	    password="your password",
 	    database="Your Database")'''
+
+			import pymysql
+	import pymysql.cursors
