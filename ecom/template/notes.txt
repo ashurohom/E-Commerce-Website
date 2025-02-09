@@ -224,3 +224,4 @@ import : from django.urls import path
 
 	cursor=connection.cursor()
 	# cursor.execute("create table student1(id int,name varchar(40),marks int);")			
+		print("Table created successfully !!!")
