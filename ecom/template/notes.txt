@@ -228,3 +228,4 @@ import : from django.urls import path
 			# to insert the values in the table
 				cursor.execute("insert into student1 values(1,'tejas',100);")
 			connection.commit()		
+		print("Inserted values succefully !!!")		
