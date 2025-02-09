@@ -240,3 +240,4 @@ import : from django.urls import path
 =========================================================================================================================================================================
 # CRUD Operations
 	- Create, Read, Update, Delete
+	crud : this time use default database [DB SQL Lite]	
