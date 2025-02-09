@@ -229,3 +229,6 @@ import : from django.urls import path
 				cursor.execute("insert into student1 values(1,'tejas',100);")
 			connection.commit()		
 		print("Inserted values succefully !!!")		
+
+	# to fetch the data of table
+			
