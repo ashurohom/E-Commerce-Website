@@ -234,3 +234,5 @@ import : from django.urls import path
 	cursor.execute("select * from student1")			
 
 	# to display the values from table	
+	for i in cursor.fetchall():
+	    print(i)	
