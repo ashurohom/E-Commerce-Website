@@ -220,3 +220,4 @@ import : from django.urls import path
 	    user="root",
 	    password="1234",
 	    database="p432")
+			print("Mysql connected successfully !!!")
