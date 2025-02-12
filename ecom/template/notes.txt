@@ -254,3 +254,5 @@ import : from django.urls import path
 	email = models.EmailField(max_length=30)
 	course = models.CharField(max_length=30)
 	rollno = models.IntegerField()	
+	
+	After
