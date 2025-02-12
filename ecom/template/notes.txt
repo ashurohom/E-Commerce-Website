@@ -245,3 +245,4 @@ import : from django.urls import path
 1) Create :	
 	1) create a class with class name and get default parameter models.Model
 	2) Create a DB Table with col-name and datatype 
+		in Model.py
