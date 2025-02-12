@@ -247,3 +247,6 @@ import : from django.urls import path
 	2) Create a DB Table with col-name and datatype 
 		in Model.py
 	class Student(models.Model):
+	first_name = models.CharField(max_length=30)
+	last_name = models.CharField(max_length=30)
+	address = models.CharField(max_length=100)	
