@@ -256,3 +256,6 @@ import : from django.urls import path
 	rollno = models.IntegerField()	
 	
 	After
+		- after creating a model we can use a makemigrations and migrate 
+	- makemigration command convert code into SQL Schema
+	- migrate create table according to schema
