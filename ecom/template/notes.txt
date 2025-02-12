@@ -270,6 +270,10 @@ import : from django.urls import path
 
 	- ID : In the table ID Bydefault Genrated
 
+	ORM - object relational mapping/mapper [app and sql connection]
+
+	Q.what is use of migrate and migrations
+
 
 
 
