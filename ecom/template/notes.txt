@@ -250,3 +250,7 @@ import : from django.urls import path
 	first_name = models.CharField(max_length=30)
 	last_name = models.CharField(max_length=30)
 	address = models.CharField(max_length=100)	
+	mobile = models.CharField(max_length=11)
+	email = models.EmailField(max_length=30)
+	course = models.CharField(max_length=30)
+	rollno = models.IntegerField()	
