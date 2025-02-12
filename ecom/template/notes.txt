@@ -268,7 +268,7 @@ import : from django.urls import path
 	After :
 	then : goto myapp -> itrations for check the 0001_initial.py file is created
 
-
+	- ID : In the table ID Bydefault Genrated
 
 
 
