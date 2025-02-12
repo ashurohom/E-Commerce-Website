@@ -261,3 +261,6 @@ import : from django.urls import path
 	- migrate create table according to schema
 		- python manage.py makemigrations
 	- python manage.py migrate [remove the migration error]
+
+	After : 
+	then : install DB Browser 'sqllite' [one time]	
