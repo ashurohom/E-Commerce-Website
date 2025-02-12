@@ -259,3 +259,5 @@ import : from django.urls import path
 		- after creating a model we can use a makemigrations and migrate 
 	- makemigration command convert code into SQL Schema
 	- migrate create table according to schema
+		- python manage.py makemigrations
+	- python manage.py migrate [remove the migration error]
