@@ -264,3 +264,20 @@ import : from django.urls import path
 
 	After : 
 	then : install DB Browser 'sqllite' [one time]	
+	- to check the table is created.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
