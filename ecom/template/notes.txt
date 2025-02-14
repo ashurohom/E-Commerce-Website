@@ -276,7 +276,8 @@ import : from django.urls import path
 
 
 # Then : HTML file
-
+	- Create a html form to submit data also add name field in input tag
+	- in the from used a CSRF token for data security, without token data can't submit
 
 
 
