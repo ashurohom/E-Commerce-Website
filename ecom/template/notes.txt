@@ -275,7 +275,7 @@ import : from django.urls import path
 	Q.what is use of migrate and migrations
 
 
-
+# Then : HTML file
 
 
 
