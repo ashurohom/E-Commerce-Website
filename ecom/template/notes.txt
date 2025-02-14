@@ -287,3 +287,6 @@ csrf : Cross-Site Request Forgery
 
 # Then : views.py
 
+	- create a function
+	- always give a function path in urls.py file
+	- check the form method [GET/POST]
