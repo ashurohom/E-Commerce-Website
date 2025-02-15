@@ -298,3 +298,5 @@ csrf : Cross-Site Request Forgery
 	print(fn)
 
 ==================================================================================================
+
+# Store Data To Backend/Database
