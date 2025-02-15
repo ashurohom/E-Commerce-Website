@@ -302,3 +302,6 @@ csrf : Cross-Site Request Forgery
 # Store Data To Backend/Database
 	QuerySet = list of all django orm quries
 	Syntax to send data into DB
+
+		- Model.objects.create(field=values)==>sql
+	  [insert into table(cols) values(value)]
