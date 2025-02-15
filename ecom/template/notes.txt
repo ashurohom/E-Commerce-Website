@@ -305,3 +305,5 @@ csrf : Cross-Site Request Forgery
 
 		- Model.objects.create(field=values)==>sql
 	  [insert into table(cols) values(value)]
+
+	  	Ex : stud = Student.objects.create(name=n,rollno=r)
