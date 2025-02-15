@@ -301,3 +301,4 @@ csrf : Cross-Site Request Forgery
 
 # Store Data To Backend/Database
 	QuerySet = list of all django orm quries
+	Syntax to send data into DB
