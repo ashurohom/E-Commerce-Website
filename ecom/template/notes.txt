@@ -290,3 +290,9 @@ csrf : Cross-Site Request Forgery
 	- create a function
 	- always give a function path in urls.py file
 	- check the form method [GET/POST]
+
+		Ex : 
+	def home(request):
+    	    if request.method == 'POST':
+                fn = request.POST["first_name"]
+	print(fn)
