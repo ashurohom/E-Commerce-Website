@@ -296,3 +296,5 @@ csrf : Cross-Site Request Forgery
     	    if request.method == 'POST':
                 fn = request.POST["first_name"]
 	print(fn)
+
+==================================================================================================
