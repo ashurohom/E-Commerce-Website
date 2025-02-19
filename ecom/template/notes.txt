@@ -307,3 +307,8 @@ csrf : Cross-Site Request Forgery
 	  [insert into table(cols) values(value)]
 
 	  	Ex : stud = Student.objects.create(name=n,rollno=r)
+
+In Views.py		
+	Create a object and fetch all value from html table.
+
+	- first import the Model [ from .models import Student ]
