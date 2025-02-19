@@ -315,3 +315,6 @@ In Views.py
 	- get value from the html form
 	EX : 	n = request.POST['name']
         	r = request.POST['rollNumber']
+
+	- stud=Student.objects.create(first_name=fn,last_name=ln,address=a,mobile=m,email=e,course=c,rollno=r)
+	  stud.save()
