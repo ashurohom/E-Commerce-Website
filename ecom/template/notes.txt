@@ -312,3 +312,6 @@ In Views.py
 	Create a object and fetch all value from html table.
 
 	- first import the Model [ from .models import Student ]
+	- get value from the html form
+	EX : 	n = request.POST['name']
+        	r = request.POST['rollNumber']
