@@ -330,4 +330,6 @@ def index(request):
         s = request.POST['subject']	
         stud = Student.objects.create(name=n,rollNumber=r,subject=s)
         stud.save()
-        return redirect('/index/')		
+        return redirect('/index/')	
+	else:    
+        return render(request,'index.html')		
