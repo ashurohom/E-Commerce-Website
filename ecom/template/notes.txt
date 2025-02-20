@@ -323,4 +323,8 @@ In Views.py
 
 	Example : 
 
-def index(request):		
+def index(request):	
+    if request.method == 'POST':
+        n = request.POST['name']
+        r = request.POST['rollNumber']
+        s = request.POST['subject']	
