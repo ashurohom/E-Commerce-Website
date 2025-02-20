@@ -335,3 +335,7 @@ def index(request):
         return render(request,'index.html')		
 
 =========================================================================================================================================================================
+
+2) Read
+
+	# Fetch data from backend and display it on HTML TABLE.
