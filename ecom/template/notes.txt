@@ -328,3 +328,6 @@ def index(request):
         n = request.POST['name']
         r = request.POST['rollNumber']
         s = request.POST['subject']	
+        stud = Student.objects.create(name=n,rollNumber=r,subject=s)
+        stud.save()
+        return redirect('/index/')		
