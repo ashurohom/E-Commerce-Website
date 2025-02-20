@@ -319,4 +319,8 @@ In Views.py
 	- stud=Student.objects.create(first_name=fn,last_name=ln,address=a,mobile=m,email=e,course=c,rollno=r)
 	  stud.save()
 	  	then objectname.save() to save the changes
-	Note : model.py and views object value are always same		
+	Note : model.py and views object value are always same
+
+	Example : 
+
+def index(request):		
