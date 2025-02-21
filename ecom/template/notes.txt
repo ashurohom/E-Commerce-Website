@@ -343,4 +343,4 @@ def index(request):
 
 	- import redirect [for same page form and table or redirect anywhere]
 	i.e = [ from django.shortcuts import render,redirect ]
-	
+	- create a function [name = show]
