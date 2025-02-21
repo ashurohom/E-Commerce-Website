@@ -346,3 +346,4 @@ def index(request):
 	- create a function [name = show]
 	- always give a function path in urls.py file
 	- create a one dictionary [name = context]
+	- create a one object and get the all value [ stud = Student.objects.all() ]
