@@ -339,3 +339,8 @@ def index(request):
 2) Read
 
 	# Fetch data from backend and display it on HTML TABLE.
+	#in Views.py
+
+	- import redirect [for same page form and table or redirect anywhere]
+	i.e = [ from django.shortcuts import render,redirect ]
+	
