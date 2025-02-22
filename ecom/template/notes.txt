@@ -373,3 +373,7 @@ def show(request):
 		<td>{{i.email}}</td>		
 		<td>{{i.course}}</td>
         <td>{{i.rollno}}</td>
+        <td><a href="/delete/{{i.id}}">Delete/</a> <a>Update</a></td>
+        </tr>
+            {% endfor %}
+        </tbody>
