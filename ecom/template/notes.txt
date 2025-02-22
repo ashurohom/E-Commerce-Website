@@ -359,3 +359,4 @@ def show(request):
 		Then : 
 	- in the form.html
 		- above tr tag add for loop i.e: [in the for loop add tr tag]
+		- also add the database value
