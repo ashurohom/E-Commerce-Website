@@ -352,3 +352,4 @@ def index(request):
 Example : 
 def show(request):
     context = {}
+	stud = Student.objects.all()
