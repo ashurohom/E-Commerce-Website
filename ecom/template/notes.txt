@@ -353,3 +353,4 @@ Example :
 def show(request):
     context = {}
 	stud = Student.objects.all()
+	    context['students']=stud
