@@ -350,3 +350,4 @@ def index(request):
 	- create a key value in dictionary [ context['students']=stud ] 
 			
 Example : 
+def show(request):
