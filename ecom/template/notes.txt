@@ -371,3 +371,5 @@ def show(request):
 		<td>{{i.address}}</td>
         <td>{{i.mobile}}</td>
 		<td>{{i.email}}</td>		
+		<td>{{i.course}}</td>
+        <td>{{i.rollno}}</td>
