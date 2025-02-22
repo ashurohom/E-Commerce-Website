@@ -348,3 +348,5 @@ def index(request):
 	- create a one dictionary [name = context]
 	- create a one object and get the all value [ stud = Student.objects.all() ]
 	- create a key value in dictionary [ context['students']=stud ] 
+			
+Example : 
