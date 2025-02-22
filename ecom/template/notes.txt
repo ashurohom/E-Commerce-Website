@@ -368,3 +368,6 @@ def show(request):
         <tr>
 		<td>{{i.first_name}}</td>
         <td>{{i.last_name}}</td>
+		<td>{{i.address}}</td>
+        <td>{{i.mobile}}</td>
+		<td>{{i.email}}</td>		
