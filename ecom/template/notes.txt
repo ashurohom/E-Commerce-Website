@@ -365,4 +365,6 @@ def show(request):
 
 	<tbody>
 	 {% for i in students%}
-                    <tr>
+        <tr>
+		<td>{{i.first_name}}</td>
+        <td>{{i.last_name}}</td>
