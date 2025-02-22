@@ -364,3 +364,5 @@ def show(request):
 		Example :
 
 	<tbody>
+	 {% for i in students%}
+                    <tr>
