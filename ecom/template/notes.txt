@@ -353,4 +353,5 @@ Example :
 def show(request):
     context = {}
 	stud = Student.objects.all()
-	    context['students']=stud
+	context['students']=stud
+    return render(request,'table.html',context)
