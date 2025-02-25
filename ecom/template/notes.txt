@@ -380,3 +380,7 @@ def show(request):
 
 =========================================================================================================================================================================
 3) Delete
+	#in views.py
+
+	- create a function [delete] and take one parameter which is call a data[id]
+	i.e : def Delete(request,sid):
