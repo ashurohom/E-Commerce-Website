@@ -384,3 +384,6 @@ def show(request):
 
 	- create a function [delete] and take one parameter which is call a data[id]
 	i.e : def Delete(request,sid):
+	
+	- then create a object with model name.objects.filter
+	[stud = Student.objects.filter(id=sid)]
