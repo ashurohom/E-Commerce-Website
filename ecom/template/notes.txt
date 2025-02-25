@@ -387,3 +387,6 @@ def show(request):
 	
 	- then create a object with model name.objects.filter
 	[stud = Student.objects.filter(id=sid)]
+	
+	- delete the record using object name
+	[ stud.delete() ]
