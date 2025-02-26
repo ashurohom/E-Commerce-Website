@@ -391,3 +391,4 @@ def show(request):
 	- delete the record using object name
 	[ stud.delete() ]
 	#in html file
+		- add a delete button in table
