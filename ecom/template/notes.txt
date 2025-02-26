@@ -392,3 +392,4 @@ def show(request):
 	[ stud.delete() ]
 	#in html file
 		- add a delete button in table
+		- in <td> add anchor tag for delete button make url
