@@ -393,3 +393,5 @@ def show(request):
 	#in html file
 		- add a delete button in table
 		- in <td> add anchor tag for delete button make url
+		- in anchor tag give a href = path for delete
+ 		[<td><a href="/delete/{{i.id}}">Delete/</a></td>]	
